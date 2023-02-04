@@ -1,0 +1,254 @@
+@charset "UTF-8";
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #45B3E9;
+}
+
+@font-face {
+  font-family: "TT Commons";
+  src: url("/TTCommons-Regular.2dc00d94.eot");
+  src: local("TT Commons Regular"), local("TTCommons-Regular"), url("/TTCommons-Regular.2dc00d94.eot?#iefix") format("embedded-opentype"), url("/TTCommons-Regular.ebf27aa7.woff2") format("woff2"), url("/TTCommons-Regular.9167f049.woff") format("woff"), url("/TTCommons-Regular.e4495d1b.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "QIWIPixel-Regular";
+  src: url("/QIWIPixel-Regular.eae26410.otf") format("truetype");
+  /*font-style: normal;*/
+  /*font-weight: normal;*/
+}
+@font-face {
+  font-family: "TT Commons";
+  src: url("/TTCommons-Medium.5b1ecd30.eot");
+  /*src: local('☺'),*/
+  /*url("../fonts/ptserif-bold.eot?#iefix") format("embedded-opentype"),*/
+  /*url("../fonts/ptserif-bold.woff") format("woff"),*/
+  /*url("../fonts/ptserif-bold.ttf") format("truetype"),*/
+  /*url("../fonts/ptserif-bold.svg#PT Serif") format("svg");*/
+  font-weight: bold;
+  font-style: normal;
+}
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #45B3E9;
+  height: 100vh;
+  justify-content: space-between;
+}
+.HomePage .cloud {
+  position: absolute;
+}
+.HomePage .cloud.one {
+  top: 21px;
+  width: 95px;
+  height: 48px;
+  right: -20px;
+}
+.HomePage .cloud.two {
+  top: 166px;
+  left: -20px;
+  width: 94.96px;
+  height: 47.48px;
+}
+.HomePage .cloud.three {
+  width: 59.42px;
+  top: 285px;
+  height: 29.71px;
+  right: 0;
+}
+.HomePage .cloud.four {
+  left: 28px;
+  width: 46.58px;
+  height: 23.29px;
+  top: 371px;
+}
+.HomePage img {
+  width: 70%;
+}
+.HomePage .boxFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.HomePage p {
+  max-width: 225px;
+  font-family: "TT Commons";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.HomePage .textMainApp {
+  font-weight: 400;
+  font-size: 62px;
+  line-height: 74px;
+  font-family: "QIWIPixel-Regular";
+  color: white;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.HomePage button {
+  margin-bottom: 50px;
+  background: #8044C7;
+  border: 1.24971px solid #000000;
+  border-radius: 17.496px;
+  font-family: "TT Commons";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 15px 93px 15px 93px;
+  color: #FFFFFF;
+}
+
+.Plug {
+  display: flex;
+}
+.Plug img {
+  position: absolute;
+  bottom: 0;
+}
+.Plug .textMainApp {
+  font-weight: 400;
+  font-size: 62px;
+  line-height: 74px;
+  font-family: "QIWIPixel-Regular";
+  color: white;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Plug .blockText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Plug .blockText .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 74px;
+}
+.Plug p {
+  font-family: "TT Commons";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.Plug .qr {
+  position: relative;
+  z-index: 200;
+}
+
+.endPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #45B3E9;
+  padding: 0 20px;
+  height: 100vh;
+  justify-content: space-between;
+}
+.endPage .cloud {
+  position: absolute;
+}
+.endPage .cloud.one {
+  top: 27.42px;
+  left: -10px;
+  width: 63.65px;
+  height: 31.82px;
+}
+.endPage .cloud.two {
+  top: 20.79px;
+  right: 48px;
+  width: 47.74px;
+  height: 23.87px;
+}
+.endPage .cloud.three {
+  top: 108px;
+  right: -10px;
+}
+.endPage .boxFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.endPage p {
+  font-family: "TT Commons";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.endPage .textMainApp {
+  font-weight: 400;
+  font-size: 62px;
+  line-height: 74px;
+  font-family: "QIWIPixel-Regular";
+  color: white;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.endPage button {
+  margin-bottom: 50px;
+  font-family: "TT Commons";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 15px 93px 15px 93px;
+  color: #FFFFFF;
+  background: #FF8000;
+  border: 1.24971px solid #FFFFFF;
+  border-radius: 17.496px;
+}
+.endPage .count {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.endPage .count .contNumber {
+  display: flex;
+  flex-direction: column;
+}
+.endPage .count .contNumber span {
+  font-family: "TT Commons";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 74px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.score {
+  font-weight: 400;
+  font-size: 62px;
+  font-family: "QIWIPixel-Regular";
+  color: white;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  z-index: 1000;
+  font-style: normal;
+  line-height: 115px;
+}
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */
