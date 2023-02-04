@@ -32496,11 +32496,12 @@ var Pipe = function Pipe(_ref) {
       scopeTime = _ref.scopeTime;
   var windowSize = window.screen.height;
   console.log(x);
-  (0, _react.useEffect)(function () {//  console.log(pipes)
-    // if (pipes.length > 2 && inView){
-    //
-    //   setScopeTime(scopeTime + 1)
-    // }
+  (0, _react.useEffect)(function () {
+    console.log(pipes.length / 3);
+
+    if (pipes.length > 2 && inView) {
+      setScopeTime(scopeTime + 1);
+    }
   }, [pipes.length]);
   var ref = (0, _react.useRef)();
 
@@ -34334,7 +34335,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53554" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54379" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
