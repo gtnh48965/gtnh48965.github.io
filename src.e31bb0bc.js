@@ -29122,7 +29122,7 @@ var _default = function _default() {
 
     case 'FALL':
       return _objectSpread({}, state, {
-        y: state.y + 30,
+        y: state.y + 40,
         r: 0
       });
 
@@ -32495,12 +32495,11 @@ var Pipe = function Pipe(_ref) {
       setScopeTime = _ref.setScopeTime,
       scopeTime = _ref.scopeTime;
   var windowSize = window.screen.height;
-  console.log(x);
   (0, _react.useEffect)(function () {
-    console.log(pipes.length / 3);
+    console.log(pipes);
 
-    if (pipes.length > 2 && inView) {
-      setScopeTime(scopeTime + 1);
+    if (pipes.length > 6) {
+      setScopeTime(pipes.length / 3 - 2);
     }
   }, [pipes.length]);
   var ref = (0, _react.useRef)();
@@ -32510,9 +32509,8 @@ var Pipe = function Pipe(_ref) {
     triggerOnce: true
   }),
       inViewRef = _useInView.ref,
-      inView = _useInView.inView;
+      inView = _useInView.inView; // Используйте `useCallback`, чтобы не создавать заново функцию при каждом рендеринге
 
-  console.log(inView, 222222); // Используйте `useCallback`, чтобы не создавать заново функцию при каждом рендеринге
 
   var setRefs = (0, _react.useCallback)(function (node) {
     // Ref из useRef должен иметь узел, назначенный `current`
@@ -32570,14 +32568,16 @@ var Pipe = function Pipe(_ref) {
       src: _.default
     }), /*#__PURE__*/_react.default.createElement("div", {
       style: {
-        backgroundSize: 'cover',
+        // backgroundSize:'cover',
+        backgroundRepeat: 'no-repeat',
         position: 'absolute',
         top: topHeight + 200,
         left: x + i * 100,
         bottom: 0,
+        // backgroundSize: '100% 100%',
         width: 107,
         zIndex: 200,
-        height: "calc(".concat(windowSize, "px - ").concat(topHeight, "px - 300px)"),
+        height: "calc(".concat(windowSize, "px - ").concat(topHeight, "px)"),
         background: "url(".concat(_pipeBottom.default, ")"),
         transition: 'left 300ms'
       }
@@ -32663,7 +32663,48 @@ module.exports = "/1.ec788bf8.svg";
 module.exports = "/2.2881e36e.svg";
 },{}],"images/cloud/gameOver/3.svg":[function(require,module,exports) {
 module.exports = "/3.8cf29549.svg";
-},{}],"components/GameOver.js":[function(require,module,exports) {
+},{}],"images/Line.svg":[function(require,module,exports) {
+module.exports = "/Line.ca9a18cf.svg";
+},{}],"images/stars.svg":[function(require,module,exports) {
+module.exports = "/stars.49f45c41.svg";
+},{}],"components/LinkСopied.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _stars = _interopRequireDefault(require("../images/stars.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var LinkCopied = function LinkCopied(_ref) {
+  var openModal = _ref.openModal,
+      setOpenModal = _ref.setOpenModal;
+  (0, _react.useEffect)(function () {
+    document.body.addEventListener('click', function () {
+      return setOpenModal(false);
+    });
+  });
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "LinkCopied ".concat(openModal ? 'open' : '')
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: 'blockLink'
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _stars.default
+  }), /*#__PURE__*/_react.default.createElement("span", null, "\u0421\u0441\u044B\u043B\u043A\u0430 \u0441\u043A\u043E\u043F\u0438\u0440\u043E\u0432\u0430\u043D\u0430")));
+};
+
+var _default = LinkCopied;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","../images/stars.svg":"images/stars.svg"}],"components/GameOver.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32679,38 +32720,25 @@ var _2 = _interopRequireDefault(require("../images/cloud/gameOver/2.svg"));
 
 var _3 = _interopRequireDefault(require("../images/cloud/gameOver/3.svg"));
 
+var _Line = _interopRequireDefault(require("../images/Line.svg"));
+
+var _LinkOpied = _interopRequireDefault(require("./Link\u0421opied"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 var GameOver = function GameOver(_ref) {
   var setStatusGame = _ref.setStatusGame,
       scopeTime = _ref.scopeTime;
   var mapTitle = ['УПС...', 'Ой…..', 'GAME OVER', 'Ой-ой…..', 'Ооой…..', 'Ой! :(', 'УПС!'];
-  var mapText = ['А ты знал, что…\n' + 'в QIWI ты спокойно сможешь рассказать команде о любой ошибке или проблеме, попросить совет и задать любой волнующий вопрос даже СЕО на прямом эфире 😉', "\u041F\u043E\u0440\u0430 \u043E\u0442\u0432\u043B\u0435\u0447\u044C\u0441\u044F\u2026\u0438 \u0443\u0437\u043D\u0430\u0442\u044C \u0435\u0449\u0435 \u043A\u043E\u0435-\u0447\u0442\u043E \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E\u0435: \u0432 QIWI \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0430\u043D \u0438 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u0440\u0442\u0430\u043B QAMPUS, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0441\u043E\u0431\u0440\u0430\u043D\u044B \u043A\u043D\u0438\u0433\u0438, \u043B\u0435\u043A\u0446\u0438\u0438, \u0442\u0440\u0435\u043D\u0438\u043D\u0433\u0438, \u043A\u0443\u0440\u0441\u044B \u2028\u0438 \u043C\u043D\u043E\u0433\u043E\u0435 \u0434\u0440\u0443\u0433\u043E\u0435. \u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0438 \u043C\u043E\u0433\u0443\u0442 \u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u2028\u0438\u0445 \u0432 \u0438\u043D\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043B\u044C\u043D\u044B\u0439 \u043F\u043B\u0430\u043D \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F \u043E\u0434\u043D\u0438\u043C \u043A\u043B\u0438\u043A\u043E\u043C \u0438\u043B\u0438 \u0441\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435 \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B \uD83D\uDE09," + 'Еще один важный факт! \n' + "\u0412 QIWI \u0442\u044B \u0441\u043C\u043E\u0436\u0435\u0448\u044C \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E \u043F\u0440\u043E\u043A\u0430\u0447\u0430\u0442\u044C \u0438\u043C\u0435\u044E\u0449\u0438\u0435\u0441\u044F \u0441\u043A\u0438\u043B\u043B\u044B \u2028\u0438\u043B\u0438 \u043F\u0440\u0438\u043E\u0431\u0440\u0435\u0441\u0442\u0438 \u043D\u043E\u0432\u044B\u0435. \u0412 \u0440\u0430\u043C\u043A\u0430\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u043B\u0438\u043C\u0438\u0442\u0430 \u043C\u044B \u043E\u043F\u043B\u0430\u0447\u0438\u0432\u0430\u0435\u043C \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0430\u043C \u0432\u043D\u0435\u0448\u043D\u0435\u0435 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \n" + 'и уроки английского. А для любителей чтения у нас есть три электронные библиотеки 👩🏼‍💻\n', 'А ты знал, что…\n' + 'в QIWI есть корпоративный портал \n' + 'по поддержке ментального здоровья PSY support. \n' + '\n' + 'Ты сможешь обратиться не только \n' + 'к психологу, но и к нутрициологу, коучу, а совсем скоро – и к финансовому консультанту.', 'Кстати, мы регулярно проводим тимбилдинговые активности: полезные завтраки, большие фестивали \n' + 'и корпоративы, образовательные среды с приглашенными экспертами, офисные вечеринки и выездные спринты в горы или на море 💫'];
+  var mapText = ['А ты знал, что…\n' + 'в QIWI ты спокойно сможешь рассказать команде о любой ошибке или проблеме, попросить совет и задать любой волнующий вопрос даже СЕО на прямом эфире 😉', "\u041F\u043E\u0440\u0430 \u043E\u0442\u0432\u043B\u0435\u0447\u044C\u0441\u044F\u2026\u0438 \u0443\u0437\u043D\u0430\u0442\u044C \u0435\u0449\u0435 \u043A\u043E\u0435-\u0447\u0442\u043E \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E\u0435: \u0432 QIWI \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0430\u043D \u0438 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u0440\u0442\u0430\u043B QAMPUS, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0441\u043E\u0431\u0440\u0430\u043D\u044B \u043A\u043D\u0438\u0433\u0438, \u043B\u0435\u043A\u0446\u0438\u0438, \u0442\u0440\u0435\u043D\u0438\u043D\u0433\u0438, \u043A\u0443\u0440\u0441\u044B \u2028\u0438 \u043C\u043D\u043E\u0433\u043E\u0435 \u0434\u0440\u0443\u0433\u043E\u0435. \u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0438 \u043C\u043E\u0433\u0443\u0442 \u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u2028\u0438\u0445 \u0432 \u0438\u043D\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043B\u044C\u043D\u044B\u0439 \u043F\u043B\u0430\u043D \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F \u043E\u0434\u043D\u0438\u043C \u043A\u043B\u0438\u043A\u043E\u043C \u0438\u043B\u0438 \u0441\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435 \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B \uD83D\uDE09," + 'Еще один важный факт! \n' + "\u0412 QIWI \u0442\u044B \u0441\u043C\u043E\u0436\u0435\u0448\u044C \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E \u043F\u0440\u043E\u043A\u0430\u0447\u0430\u0442\u044C \u0438\u043C\u0435\u044E\u0449\u0438\u0435\u0441\u044F \u0441\u043A\u0438\u043B\u043B\u044B \u2028\u0438\u043B\u0438 \u043F\u0440\u0438\u043E\u0431\u0440\u0435\u0441\u0442\u0438 \u043D\u043E\u0432\u044B\u0435. \u0412 \u0440\u0430\u043C\u043A\u0430\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u043B\u0438\u043C\u0438\u0442\u0430 \u043C\u044B \u043E\u043F\u043B\u0430\u0447\u0438\u0432\u0430\u0435\u043C \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0430\u043C \u0432\u043D\u0435\u0448\u043D\u0435\u0435 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \n" + 'и уроки английского. А для любителей чтения у нас есть три электронные библиотеки 👩🏼‍💻\n', 'А ты знал, что…\n' + 'в QIWI есть корпоративный портал \n' + 'по поддержке ментального здоровья PSY support. \n' + '\n' + 'Ты сможешь обратиться не только \n' + 'к психологу, но и к нутрициологу, коучу, а совсем скоро – и к финансовому консультанту.', 'Кстати, мы регулярно проводим тимбилдинговые активности: полезные завтраки, большие фестивали \n' + 'и корпоративы, образовательные среды с приглашенными экспертами, офисные вечеринки и выездные спринты в горы или на море 💫', 'Мы всегда придумываем интересные активности, например: прошлым летом в QIWI мы пробежали огненную Гонку Героев, сходили на иммерсивную экскурсию по QIWI Дому, провели «Модный приговор», превратили коворкинг в средневековую таверну \n' + 'для вечеринки, организовали кулинарные поединки и мастер-классы (и это далеко не все!).', 'Важный факт: \n' + 'в QIWI целых 15 комьюнити \n' + 'по интересам: спортивных, творческих, интеллектуальных. Кстати, управляют ими сами сотрудники в качестве лидеров сообществ, а QIWI помогает воплотить все их идеи в жизнь.'];
 
   function getRandomArrayElement(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
   }
-
-  var _useState = (0, _react.useState)(),
-      _useState2 = _slicedToArray(_useState, 2),
-      maxCount = _useState2[0],
-      setMaxCount = _useState2[1];
 
   if (localStorage.getItem('State') < scopeTime) localStorage.setItem("State", JSON.stringify(scopeTime));
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -32732,7 +32760,10 @@ var GameOver = function GameOver(_ref) {
     className: "count"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: 'contNumber'
-  }, /*#__PURE__*/_react.default.createElement("p", null, "\u0421\u0427\u0415\u0422"), /*#__PURE__*/_react.default.createElement("span", null, scopeTime)), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("p", null, "\u0421\u0427\u0415\u0422"), /*#__PURE__*/_react.default.createElement("span", null, scopeTime)), /*#__PURE__*/_react.default.createElement("img", {
+    className: "line",
+    src: _Line.default
+  }), /*#__PURE__*/_react.default.createElement("div", {
     className: 'contNumber'
   }, /*#__PURE__*/_react.default.createElement("p", null, "\u0420\u0415\u041A\u041E\u0420\u0414"), /*#__PURE__*/_react.default.createElement("span", null, localStorage.getItem('State') ? localStorage.getItem('State') : 0))), /*#__PURE__*/_react.default.createElement("p", null, getRandomArrayElement(mapText))), /*#__PURE__*/_react.default.createElement("button", {
     onClick: function onClick() {
@@ -32743,7 +32774,7 @@ var GameOver = function GameOver(_ref) {
 
 var _default = GameOver;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../images/cloud/gameOver/1.svg":"images/cloud/gameOver/1.svg","../images/cloud/gameOver/2.svg":"images/cloud/gameOver/2.svg","../images/cloud/gameOver/3.svg":"images/cloud/gameOver/3.svg"}],"components/Game.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../images/cloud/gameOver/1.svg":"images/cloud/gameOver/1.svg","../images/cloud/gameOver/2.svg":"images/cloud/gameOver/2.svg","../images/cloud/gameOver/3.svg":"images/cloud/gameOver/3.svg","../images/Line.svg":"images/Line.svg","./LinkСopied":"components/LinkСopied.js"}],"components/Game.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32883,7 +32914,7 @@ var start = function start() {
         dispatch({
           type: 'GENERATE'
         });
-      }, 4000);
+      }, 4200);
       dispatch({
         type: 'START'
       });
@@ -33063,7 +33094,7 @@ var HomePage = function HomePage(_ref) {
     className: "HomePage"
   }, /*#__PURE__*/_react.default.createElement("img", {
     className: 'cloud one',
-    src: _.default
+    src: _3.default
   }), /*#__PURE__*/_react.default.createElement("img", {
     className: 'cloud two',
     src: _2.default
@@ -34201,15 +34232,48 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _bigBirds = _interopRequireDefault(require("../images/big-birds.png"));
 
 var _qrTest = _interopRequireDefault(require("../images/qrTest.png"));
 
+var _LinkOpied = _interopRequireDefault(require("./Link\u0421opied"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var Plug = function Plug() {
+  function copyToClipboard() {
+    var copytext = document.createElement('input');
+    copytext.value = window.location.href;
+    document.body.appendChild(copytext);
+    copytext.select();
+    document.execCommand('copy');
+    document.body.removeChild(copytext);
+    setOpenModal(true);
+  }
+
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      openModal = _useState2[0],
+      setOpenModal = _useState2[1];
+
   return /*#__PURE__*/_react.default.createElement("div", {
     className: 'Plug'
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -34230,12 +34294,20 @@ var Plug = function Plug() {
   }, "QIWI"), /*#__PURE__*/_react.default.createElement("p", null, "\u0412\u0441\u0435\u0433\u043E \u043E\u0434\u0438\u043D \u0432\u0437\u043C\u0430\u0445 \u043A\u0440\u044B\u043B\u0430,", /*#__PURE__*/_react.default.createElement("br", null), " \u0438 \u0442\u044B \u0432 \u0438\u0433\u0440\u0435!"), /*#__PURE__*/_react.default.createElement("img", {
     className: 'qr',
     src: _qrTest.default
-  }))));
+  }), /*#__PURE__*/_react.default.createElement("p", null, "\u0421\u043A\u0430\u043D\u0438\u0440\u0443\u0439 QR-\u043A\u043E\u0434 \u0438\u043B\u0438 \u043A\u043E\u043F\u0438\u0440\u0443\u0439 ", /*#__PURE__*/_react.default.createElement("button", {
+    onClick: copyToClipboard,
+    style: {
+      textDecoration: 'underline'
+    }
+  }, "\u0441\u0441\u044B\u043B\u043A\u0443,"), " \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0447\u0430\u0442\u044C"))), /*#__PURE__*/_react.default.createElement(_LinkOpied.default, {
+    openModal: openModal,
+    setOpenModal: setOpenModal
+  }));
 };
 
 var _default = Plug;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../images/big-birds.png":"images/big-birds.png","../images/qrTest.png":"images/qrTest.png"}],"components/App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../images/big-birds.png":"images/big-birds.png","../images/qrTest.png":"images/qrTest.png","./LinkСopied":"components/LinkСopied.js"}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34335,7 +34407,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54379" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57018" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
