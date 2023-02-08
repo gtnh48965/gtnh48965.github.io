@@ -29116,8 +29116,8 @@ var _default = function _default() {
   switch (type) {
     case 'FLY':
       return _objectSpread({}, state, {
-        y: state.y - 50,
-        r: -50
+        y: state.y - 70,
+        r: -70
       });
 
     case 'FALL':
@@ -29162,7 +29162,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var initialState = {
-  x: 300,
+  x: 500,
   pipes: []
 };
 
@@ -31949,8 +31949,12 @@ var _default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Bir
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","react-redux":"../node_modules/react-redux/es/index.js","../images/birdimg.svg":"images/birdimg.svg","../images/birds2.svg":"images/birds2.svg"}],"images/pipe-top.svg":[function(require,module,exports) {
 module.exports = "/pipe-top.f6d0c019.svg";
+},{}],"images/levelTho/TopPipeImage2.svg":[function(require,module,exports) {
+module.exports = "/TopPipeImage2.7926c2c2.svg";
 },{}],"images/pipe-bottom.svg":[function(require,module,exports) {
 module.exports = "/pipe-bottom.4c01b6e0.svg";
+},{}],"images/levelTho/BottomPipeImage.svg":[function(require,module,exports) {
+module.exports = "/BottomPipeImage.58c19680.svg";
 },{}],"../node_modules/react-intersection-observer/react-intersection-observer.esm.js":[function(require,module,exports) {
 "use strict";
 
@@ -32463,6 +32467,8 @@ function useInView(_temp) {
 }
 },{"react":"../node_modules/react/index.js"}],"images/cloud/home/3.svg":[function(require,module,exports) {
 module.exports = "/3.3f805e25.svg";
+},{}],"images/levelTho/Star.svg":[function(require,module,exports) {
+module.exports = "/Star.5bcf2a24.svg";
 },{}],"components/Pipe.js":[function(require,module,exports) {
 "use strict";
 
@@ -32477,11 +32483,17 @@ var _reactRedux = require("react-redux");
 
 var _pipeTop = _interopRequireDefault(require("../images/pipe-top.svg"));
 
+var _TopPipeImage = _interopRequireDefault(require("../images/levelTho/TopPipeImage2.svg"));
+
 var _pipeBottom = _interopRequireDefault(require("../images/pipe-bottom.svg"));
+
+var _BottomPipeImage = _interopRequireDefault(require("../images/levelTho/BottomPipeImage.svg"));
 
 var _reactIntersectionObserver = require("react-intersection-observer");
 
 var _ = _interopRequireDefault(require("../images/cloud/home/3.svg"));
+
+var _Star = _interopRequireDefault(require("../images/levelTho/Star.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32493,7 +32505,8 @@ var Pipe = function Pipe(_ref) {
   var x = _ref.x,
       pipes = _ref.pipes,
       setScopeTime = _ref.setScopeTime,
-      scopeTime = _ref.scopeTime;
+      scopeTime = _ref.scopeTime,
+      levelTho = _ref.levelTho;
   var windowSize = window.screen.height;
   (0, _react.useEffect)(function () {
     console.log(pipes);
@@ -32565,7 +32578,7 @@ var Pipe = function Pipe(_ref) {
         width: widthCloud,
         left: x + i * 100 + 120
       },
-      src: _.default
+      src: levelTho ? _Star.default : _.default
     }), /*#__PURE__*/_react.default.createElement("div", {
       style: {
         // backgroundSize:'cover',
@@ -32600,7 +32613,7 @@ var mapDispatchToProps = {};
 var _default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Pipe);
 
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-redux":"../node_modules/react-redux/es/index.js","../images/pipe-top.svg":"images/pipe-top.svg","../images/pipe-bottom.svg":"images/pipe-bottom.svg","react-intersection-observer":"../node_modules/react-intersection-observer/react-intersection-observer.esm.js","../images/cloud/home/3.svg":"images/cloud/home/3.svg"}],"images/earth.svg":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-redux":"../node_modules/react-redux/es/index.js","../images/pipe-top.svg":"images/pipe-top.svg","../images/levelTho/TopPipeImage2.svg":"images/levelTho/TopPipeImage2.svg","../images/pipe-bottom.svg":"images/pipe-bottom.svg","../images/levelTho/BottomPipeImage.svg":"images/levelTho/BottomPipeImage.svg","react-intersection-observer":"../node_modules/react-intersection-observer/react-intersection-observer.esm.js","../images/cloud/home/3.svg":"images/cloud/home/3.svg","../images/levelTho/Star.svg":"images/levelTho/Star.svg"}],"images/earth.svg":[function(require,module,exports) {
 module.exports = "/earth.835da82c.svg";
 },{}],"components/Foreground.js":[function(require,module,exports) {
 "use strict";
@@ -32732,7 +32745,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var GameOver = function GameOver(_ref) {
   var setStatusGame = _ref.setStatusGame,
-      scopeTime = _ref.scopeTime;
+      scopeTime = _ref.scopeTime,
+      gameOverCount = _ref.gameOverCount;
   var mapTitle = ['УПС...', 'Ой…..', 'GAME OVER', 'Ой-ой…..', 'Ооой…..', 'Ой! :(', 'УПС!'];
   var mapText = ['А ты знал, что…\n' + 'в QIWI ты спокойно сможешь рассказать команде о любой ошибке или проблеме, попросить совет и задать любой волнующий вопрос даже СЕО на прямом эфире 😉', "\u041F\u043E\u0440\u0430 \u043E\u0442\u0432\u043B\u0435\u0447\u044C\u0441\u044F\u2026\u0438 \u0443\u0437\u043D\u0430\u0442\u044C \u0435\u0449\u0435 \u043A\u043E\u0435-\u0447\u0442\u043E \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E\u0435: \u0432 QIWI \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0430\u043D \u0438 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u0440\u0442\u0430\u043B QAMPUS, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0441\u043E\u0431\u0440\u0430\u043D\u044B \u043A\u043D\u0438\u0433\u0438, \u043B\u0435\u043A\u0446\u0438\u0438, \u0442\u0440\u0435\u043D\u0438\u043D\u0433\u0438, \u043A\u0443\u0440\u0441\u044B \u2028\u0438 \u043C\u043D\u043E\u0433\u043E\u0435 \u0434\u0440\u0443\u0433\u043E\u0435. \u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0438 \u043C\u043E\u0433\u0443\u0442 \u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u2028\u0438\u0445 \u0432 \u0438\u043D\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043B\u044C\u043D\u044B\u0439 \u043F\u043B\u0430\u043D \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F \u043E\u0434\u043D\u0438\u043C \u043A\u043B\u0438\u043A\u043E\u043C \u0438\u043B\u0438 \u0441\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435 \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B \uD83D\uDE09," + 'Еще один важный факт! \n' + "\u0412 QIWI \u0442\u044B \u0441\u043C\u043E\u0436\u0435\u0448\u044C \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E \u043F\u0440\u043E\u043A\u0430\u0447\u0430\u0442\u044C \u0438\u043C\u0435\u044E\u0449\u0438\u0435\u0441\u044F \u0441\u043A\u0438\u043B\u043B\u044B \u2028\u0438\u043B\u0438 \u043F\u0440\u0438\u043E\u0431\u0440\u0435\u0441\u0442\u0438 \u043D\u043E\u0432\u044B\u0435. \u0412 \u0440\u0430\u043C\u043A\u0430\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u043B\u0438\u043C\u0438\u0442\u0430 \u043C\u044B \u043E\u043F\u043B\u0430\u0447\u0438\u0432\u0430\u0435\u043C \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0430\u043C \u0432\u043D\u0435\u0448\u043D\u0435\u0435 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \n" + 'и уроки английского. А для любителей чтения у нас есть три электронные библиотеки 👩🏼‍💻\n', 'А ты знал, что…\n' + 'в QIWI есть корпоративный портал \n' + 'по поддержке ментального здоровья PSY support. \n' + '\n' + 'Ты сможешь обратиться не только \n' + 'к психологу, но и к нутрициологу, коучу, а совсем скоро – и к финансовому консультанту.', 'Кстати, мы регулярно проводим тимбилдинговые активности: полезные завтраки, большие фестивали \n' + 'и корпоративы, образовательные среды с приглашенными экспертами, офисные вечеринки и выездные спринты в горы или на море 💫', 'Мы всегда придумываем интересные активности, например: прошлым летом в QIWI мы пробежали огненную Гонку Героев, сходили на иммерсивную экскурсию по QIWI Дому, провели «Модный приговор», превратили коворкинг в средневековую таверну \n' + 'для вечеринки, организовали кулинарные поединки и мастер-классы (и это далеко не все!).', 'Важный факт: \n' + 'в QIWI целых 15 комьюнити \n' + 'по интересам: спортивных, творческих, интеллектуальных. Кстати, управляют ими сами сотрудники в качестве лидеров сообществ, а QIWI помогает воплотить все их идеи в жизнь.'];
 
@@ -32756,7 +32770,7 @@ var GameOver = function GameOver(_ref) {
     className: "boxFlex"
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "textMainApp"
-  }, getRandomArrayElement(mapTitle)), /*#__PURE__*/_react.default.createElement("div", {
+  }, getRandomArrayElement(mapTitle), mapTitle[gameOverCount]), /*#__PURE__*/_react.default.createElement("div", {
     className: "count"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: 'contNumber'
@@ -32765,7 +32779,7 @@ var GameOver = function GameOver(_ref) {
     src: _Line.default
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: 'contNumber'
-  }, /*#__PURE__*/_react.default.createElement("p", null, "\u0420\u0415\u041A\u041E\u0420\u0414"), /*#__PURE__*/_react.default.createElement("span", null, localStorage.getItem('State') ? localStorage.getItem('State') : 0))), /*#__PURE__*/_react.default.createElement("p", null, getRandomArrayElement(mapText))), /*#__PURE__*/_react.default.createElement("button", {
+  }, /*#__PURE__*/_react.default.createElement("p", null, "\u0420\u0415\u041A\u041E\u0420\u0414"), /*#__PURE__*/_react.default.createElement("span", null, localStorage.getItem('State') ? localStorage.getItem('State') : 0))), /*#__PURE__*/_react.default.createElement("p", null, mapText[gameOverCount])), /*#__PURE__*/_react.default.createElement("button", {
     onClick: function onClick() {
       return setStatusGame(true);
     }
@@ -32838,13 +32852,41 @@ var Game = function Game(_ref) {
       scopeTime = _useState4[0],
       setScopeTime = _useState4[1];
 
+  var _useState5 = (0, _react.useState)(0),
+      _useState6 = _slicedToArray(_useState5, 2),
+      gameOverCount = _useState6[0],
+      setGameOverCount = _useState6[1];
+
   var pipes = (0, _react.useRef)(null);
+
+  var _useState7 = (0, _react.useState)('#45B3E9'),
+      _useState8 = _slicedToArray(_useState7, 2),
+      colorBackground = _useState8[0],
+      setColorBackground = _useState8[1];
+
+  var _useState9 = (0, _react.useState)(false),
+      _useState10 = _slicedToArray(_useState9, 2),
+      levelTho = _useState10[0],
+      setLevelTho = _useState10[1];
 
   if (status === 'game-over') {
     clearInterval(gameLoop);
     clearInterval(pipeGenerator);
   }
 
+  (0, _react.useEffect)(function () {
+    if (status === 'game-over') {
+      setGameOverCount(function (gameOverCount) {
+        return gameOverCount + 1;
+      });
+
+      if (localStorage.getItem("State") > 1) {
+        setLevelTho(true);
+        document.body.style.background = '#2986FF';
+        setColorBackground('#2986FF');
+      }
+    }
+  }, [status]);
   (0, _react.useEffect)(function () {
     if (ref && ref.current) {
       var handleKeyPress = function handleKeyPress() {
@@ -32869,6 +32911,7 @@ var Game = function Game(_ref) {
     }
   }, [statusGame]);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, status === 'game-over' ? /*#__PURE__*/_react.default.createElement(_GameOver.default, {
+    gameOverCount: gameOverCount,
     scopeTime: scopeTime,
     setStatusGame: setStatusGame
   }) : /*#__PURE__*/_react.default.createElement("div", {
@@ -32877,12 +32920,13 @@ var Game = function Game(_ref) {
       position: 'relative',
       width: '100%',
       height: '100vh',
-      background: "#45B3E9",
+      background: "".concat(colorBackground),
       overflow: 'hidden'
     }
   }, /*#__PURE__*/_react.default.createElement(_Score.default, {
     scopeTime: scopeTime
   }), /*#__PURE__*/_react.default.createElement(_Bird.default, null), /*#__PURE__*/_react.default.createElement(_Pipe.default, {
+    levelTho: levelTho,
     scopeTime: scopeTime,
     setScopeTime: setScopeTime
   }), /*#__PURE__*/_react.default.createElement(_Foreground.default, null)));
@@ -34407,7 +34451,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57018" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62548" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

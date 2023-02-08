@@ -32,7 +32,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #45B3E9;
   height: 100vh;
   justify-content: space-between;
 }
@@ -91,7 +90,7 @@ body {
   text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .HomePage button {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   background: #8044C7;
   border: 1.24971px solid #000000;
   border-radius: 17.496px;
@@ -165,7 +164,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #45B3E9;
   padding: 0 20px;
   height: 100vh;
   justify-content: space-between;
@@ -215,7 +213,7 @@ body {
   text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .endPage button {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   font-family: "TT Commons";
   font-style: normal;
   font-weight: 500;
