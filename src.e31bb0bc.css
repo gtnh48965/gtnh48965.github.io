@@ -1,7 +1,14 @@
 body {
   width: 100vw;
   height: 100vh;
+  transition: background 0.5s ease;
   background: #45B3E9;
+}
+body.levelTho {
+  background: #2986FF;
+}
+body.superLevel {
+  background: #8044C7;
 }
 
 @font-face {
