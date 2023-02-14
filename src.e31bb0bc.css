@@ -1,6 +1,4 @@
 body {
-  width: 100vw;
-  height: 100vh;
   transition: background 0.5s ease;
   background: #45B3E9;
 }
@@ -49,7 +47,7 @@ body.superLevel {
   top: 21px;
   width: 95px;
   height: 48px;
-  right: -20px;
+  right: 0;
 }
 .HomePage .cloud.two {
   top: 166px;
@@ -192,14 +190,10 @@ body.superLevel {
 }
 .endPage .cloud.three {
   top: 108px;
-  right: -10px;
-}
-.endPage .boxFlex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  right: 0;
 }
 .endPage p {
+  max-width: 280px;
   font-family: "TT Commons";
   font-style: normal;
   font-weight: 400;
@@ -308,6 +302,80 @@ body.superLevel {
   line-height: 28px;
   text-align: center;
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 800px) {
+  .LinkCopied.open .blockLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .LinkCopied.open .blockLink span {
+    margin-top: 30px;
+    font-size: 32px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+.inputFeedback {
+  width: 100%;
+  height: 65.58px;
+  background: #FFFFFF;
+  border-radius: 7.88918px;
+  font-family: "TT Commons";
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 24.6537px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: #272F3D;
+}
+
+.hintInput {
+  font-family: "TT Commons";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11.8338px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #797E8B;
+  left: 10px;
+  top: 10px;
+  position: absolute;
+}
+
+.inputFeedbackWrap {
+  position: relative;
+  width: 100%;
+}
+
+.start {
+  animation: 50s linear 0s infinite running slidein;
+}
+
+.foreground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 108px;
+  z-index: 100;
+}
+
+@keyframes slidein {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
