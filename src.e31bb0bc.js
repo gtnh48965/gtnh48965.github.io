@@ -29386,7 +29386,7 @@ var GameOver = function GameOver(_ref) {
     return arr[Math.floor(Math.random() * arr.length)];
   }
   if (localStorage.getItem('State') < scopeTime) localStorage.setItem("State", JSON.stringify(scopeTime));
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, mapText[gameOverCount] ? /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, _textGameOver.default[gameOverCount].body ? /*#__PURE__*/_react.default.createElement("div", {
     className: "endPage"
   }, /*#__PURE__*/_react.default.createElement("img", {
     className: 'cloud one',
@@ -29483,7 +29483,7 @@ var Game = function Game(_ref) {
       setGameOverCount(function (gameOverCount) {
         return gameOverCount + 1;
       });
-      if (gameOverCount > 7) {
+      if (gameOverCount > 4) {
         setSuperLevel(true);
       }
     }
@@ -31021,7 +31021,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64672" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50680" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
