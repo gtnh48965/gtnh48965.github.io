@@ -29598,7 +29598,7 @@ var check = function check(dispatch, getState) {
       return true;
     }
   });
-  if (birdY > window.screen.height - 500) {
+  if (birdY > window.screen.height - 308) {
     dispatch({
       type: 'GAME_OVER'
     });
