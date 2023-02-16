@@ -28962,6 +28962,19 @@ var Pipe = function Pipe(_ref) {
     setCountMap = _useState2[1];
   var mapSuper = [_Fire.default, _Lightning.default, _Star.default];
   var windowSize = window.screen.height;
+  var ref = (0, _react.useRef)();
+  var _useInView = (0, _reactIntersectionObserver.useInView)({
+      threshold: 0,
+      triggerOnce: true
+    }),
+    inViewRef = _useInView.ref,
+    inView = _useInView.inView;
+  // Используйте `useCallback`, чтобы не создавать заново функцию при каждом рендеринге
+  var setRefs = (0, _react.useCallback)(function (node) {
+    // Ref из useRef должен иметь узел, назначенный `current`
+    ref.current = node;
+    inViewRef(node);
+  }, [inViewRef]);
   (0, _react.useEffect)(function () {
     var count = 0;
     console.log(x);
@@ -29011,19 +29024,6 @@ var Pipe = function Pipe(_ref) {
       return mapHint[10];
     }
   };
-  var ref = (0, _react.useRef)();
-  var _useInView = (0, _reactIntersectionObserver.useInView)({
-      threshold: 0,
-      triggerOnce: true
-    }),
-    inViewRef = _useInView.ref,
-    inView = _useInView.inView;
-  // Используйте `useCallback`, чтобы не создавать заново функцию при каждом рендеринге
-  var setRefs = (0, _react.useCallback)(function (node) {
-    // Ref из useRef должен иметь узел, назначенный `current`
-    ref.current = node;
-    inViewRef(node);
-  }, [inViewRef]);
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       position: 'relative'
@@ -29058,8 +29058,7 @@ var Pipe = function Pipe(_ref) {
         top: topHeight,
         height: 200,
         width: 107,
-        left: x + i * 280,
-        background: 'red'
+        left: x + i * 280
       }
     }), /*#__PURE__*/_react.default.createElement("img", {
       style: {
@@ -31061,7 +31060,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59047" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64672" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
