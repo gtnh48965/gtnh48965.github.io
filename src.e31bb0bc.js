@@ -29522,6 +29522,7 @@ var Game = function Game(_ref) {
       }
     }
   }, [levelTho, superLevel]);
+  var height = document.documentElement.scrollHeight;
   (0, _react.useEffect)(function () {
     if (ref && ref.current) {
       var handleKeyPress = function handleKeyPress() {
@@ -29544,11 +29545,14 @@ var Game = function Game(_ref) {
     }
   }, [statusGame]);
   (0, _react.useEffect)(function () {
+    var window = document.documentElement.scrollHeight;
+    setWindowHeight(window);
+    console.log(window);
+  }, []);
+  (0, _react.useEffect)(function () {
     if (status === 'playing') {
       document.body.classList.add('hidden');
-      var _window = document.documentElement.scrollHeight;
-      setWindowHeight(_window);
-      console.log(_window);
+      console.log(window);
     } else {
       document.body.classList.remove('hidden');
     }
@@ -29561,10 +29565,10 @@ var Game = function Game(_ref) {
   }) : /*#__PURE__*/_react.default.createElement("div", {
     ref: ref,
     style: {
-      maxHeight: "".concat(status !== 'game-over' && windowHeight !== 0 ? windowHeight : '', "px"),
+      height: "".concat(windowHeight !== 0 ? windowHeight : '', "px"),
       position: 'relative',
       width: '100%',
-      height: '100vh',
+      // height: `${windowHeight}`,
       overflow: 'hidden'
     }
   }, /*#__PURE__*/_react.default.createElement(_Score.default, {
@@ -31055,7 +31059,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52714" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59047" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
