@@ -28956,32 +28956,27 @@ var Pipe = function Pipe(_ref) {
     superLevel = _ref.superLevel,
     levelTho = _ref.levelTho;
   var mapHint = [_hint.default, _hint2.default, _hint3.default, _hint4.default, _hint5.default, _hint6.default, _hint7.default, _hint7.default, _hint8.default, _hint9.default, _hint10.default, _hint11.default];
+  var windowSize = window.screen.height;
   var _useState = (0, _react.useState)(0),
     _useState2 = _slicedToArray(_useState, 2),
-    countMap = _useState2[0],
-    setCountMap = _useState2[1];
-  var mapSuper = [_Fire.default, _Lightning.default, _Star.default];
-  var windowSize = window.screen.height;
-  var ref = (0, _react.useRef)();
-  var _useInView = (0, _reactIntersectionObserver.useInView)({
-      threshold: 0,
-      triggerOnce: true
-    }),
-    inViewRef = _useInView.ref,
-    inView = _useInView.inView;
-  // Используйте `useCallback`, чтобы не создавать заново функцию при каждом рендеринге
-  var setRefs = (0, _react.useCallback)(function (node) {
-    // Ref из useRef должен иметь узел, назначенный `current`
-    ref.current = node;
-    inViewRef(node);
-  }, [inViewRef]);
+    count = _useState2[0],
+    setCount = _useState2[1];
   (0, _react.useEffect)(function () {
-    var count = 0;
-    console.log(x);
-    count = count + 1;
-    console.log(count);
+    console.log(document.getElementsByClassName('listPipe'));
+    if (document.getElementsByClassName('listPipe')[count]) {
+      if (document.getElementsByClassName('listPipe')[count].getBoundingClientRect().left < 200) {
+        setCount(function (count) {
+          return count + 1;
+        });
+        console.log(count);
+        setScopeTime(count);
+      }
+    }
+  });
+  (0, _react.useEffect)(function () {
     if (pipes.length > 7) {
-      setScopeTime(pipes.length / 3 - 3);
+
+      // setScopeTime((pipes.length / 3) - 3)
     }
   }, [pipes]);
   var imgMini = function imgMini(i) {
@@ -29028,7 +29023,7 @@ var Pipe = function Pipe(_ref) {
     style: {
       position: 'relative'
     }
-  }, pipes.map(function (_ref2, i) {
+  }, pipes.map(function (_ref2, i, index) {
     var topHeight = _ref2.topHeight,
       widthCloud = _ref2.widthCloud,
       widthCloudTop = _ref2.widthCloudTop;
@@ -29051,14 +29046,14 @@ var Pipe = function Pipe(_ref) {
         transition: 'left 300ms'
       }
     }), /*#__PURE__*/_react.default.createElement("div", {
-      ref: setRefs,
       className: 'listPipe',
       style: {
         position: 'absolute',
         top: topHeight,
         height: 200,
         width: 107,
-        left: x + i * 280
+        left: x + i * 300
+        // background: 'red'
       }
     }), /*#__PURE__*/_react.default.createElement("img", {
       style: {
@@ -29417,7 +29412,7 @@ var GameOver = function GameOver(_ref) {
     src: _Line.default
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: 'contNumber'
-  }, /*#__PURE__*/_react.default.createElement("p", null, "\u0420\u0415\u041A\u041E\u0420\u0414"), /*#__PURE__*/_react.default.createElement("span", null, localStorage.getItem('State') ? localStorage.getItem('State') : 0))), /*#__PURE__*/_react.default.createElement("p", null, _textGameOver.default[gameOverCount].body), linkTg ? /*#__PURE__*/_react.default.createElement("p", null, "\u0415\u0449\u0451 \u0431\u043E\u043B\u044C\u0448\u0435 \u0444\u0430\u043A\u0442\u043E\u0432 \u043E QIWI \u2014 \u0432 ", /*#__PURE__*/_react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("p", null, "\u0420\u0415\u041A\u041E\u0420\u0414"), /*#__PURE__*/_react.default.createElement("span", null, localStorage.getItem('State') ? localStorage.getItem('State') : 0))), /*#__PURE__*/_react.default.createElement("p", null, _textGameOver.default[gameOverCount].body), linkTg ? /*#__PURE__*/_react.default.createElement("p", null, "\u0415\u0449\u0451 \u0431\u043E\u043B\u044C\u0448\u0435 \u0444\u0430\u043A\u0442\u043E\u0432 \u043E QIWI \u2014 \u0432", /*#__PURE__*/_react.default.createElement("br", null), " ", /*#__PURE__*/_react.default.createElement("a", {
     style: {
       color: 'white'
     },
@@ -29506,6 +29501,8 @@ var Game = function Game(_ref) {
       if (gameOverCount > 10) {
         setSuperLevel(true);
       }
+    } else {
+      setLevelTho(false);
     }
   }, [status]);
   (0, _react.useEffect)(function () {
@@ -29543,12 +29540,10 @@ var Game = function Game(_ref) {
   (0, _react.useEffect)(function () {
     var window = document.documentElement.scrollHeight;
     setWindowHeight(window);
-    console.log(window);
   }, []);
   (0, _react.useEffect)(function () {
     if (status === 'playing') {
       document.body.classList.add('hidden');
-      console.log(window);
     } else {
       document.body.classList.remove('hidden');
     }
@@ -29731,8 +29726,8 @@ module.exports = "/1.1ed9a0d1.svg";
 module.exports = "/2.9c445f20.svg";
 },{}],"images/cloud/home/4.svg":[function(require,module,exports) {
 module.exports = "/4.d2d9d442.svg";
-},{}],"images/bird.png":[function(require,module,exports) {
-module.exports = "/bird.5fd28279.png";
+},{}],"images/birdHome.svg":[function(require,module,exports) {
+module.exports = "/birdHome.c79830eb.svg";
 },{}],"components/HomePage.js":[function(require,module,exports) {
 "use strict";
 
@@ -29746,7 +29741,7 @@ var _ = _interopRequireDefault(require("../images/cloud/home/1.svg"));
 var _2 = _interopRequireDefault(require("../images/cloud/home/2.svg"));
 var _3 = _interopRequireDefault(require("../images/cloud/home/3.svg"));
 var _4 = _interopRequireDefault(require("../images/cloud/home/4.svg"));
-var _bird = _interopRequireDefault(require("../images/bird.png"));
+var _birdHome = _interopRequireDefault(require("../images/birdHome.svg"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 // import BirdImage from '../images/birdimg.svg'
 
@@ -29779,7 +29774,7 @@ var HomePage = function HomePage(_ref) {
     className: "textMainApp"
   }, "QIWI"), /*#__PURE__*/_react.default.createElement("p", null, "\u0422\u0430\u043F\u0430\u0439 \u043D\u0430 \u044D\u043A\u0440\u0430\u043D, \u0438\u0437\u0431\u0435\u0433\u0430\u0439 \u043F\u0440\u0435\u043F\u044F\u0442\u0441\u0442\u0432\u0438\u0439, \u043F\u043E\u0431\u0435\u0439 \u0441\u0432\u043E\u0439 \u0440\u0435\u043A\u043E\u0440\u0434!"), /*#__PURE__*/_react.default.createElement("img", {
     className: 'bird',
-    src: _bird.default
+    src: _birdHome.default
   })), /*#__PURE__*/_react.default.createElement("button", {
     onClick: function onClick() {
       setOpenGame(true);
@@ -29789,7 +29784,7 @@ var HomePage = function HomePage(_ref) {
 //
 var _default = HomePage;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./index.scss":"components/index.scss","../images/cloud/home/1.svg":"images/cloud/home/1.svg","../images/cloud/home/2.svg":"images/cloud/home/2.svg","../images/cloud/home/3.svg":"images/cloud/home/3.svg","../images/cloud/home/4.svg":"images/cloud/home/4.svg","../images/bird.png":"images/bird.png"}],"../node_modules/ua-parser-js/dist/ua-parser.min.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./index.scss":"components/index.scss","../images/cloud/home/1.svg":"images/cloud/home/1.svg","../images/cloud/home/2.svg":"images/cloud/home/2.svg","../images/cloud/home/3.svg":"images/cloud/home/3.svg","../images/cloud/home/4.svg":"images/cloud/home/4.svg","../images/birdHome.svg":"images/birdHome.svg"}],"../node_modules/ua-parser-js/dist/ua-parser.min.js":[function(require,module,exports) {
 var define;
 /* UAParser.js v1.0.33
    Copyright © 2012-2021 Faisal Salman <f@faisalman.com>
@@ -31060,7 +31055,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64672" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53308" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
