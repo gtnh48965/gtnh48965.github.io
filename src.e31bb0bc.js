@@ -29375,17 +29375,29 @@ var _textGameOver = _interopRequireDefault(require("./textGameOver"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var GameOver = function GameOver(_ref) {
   var setStatusGame = _ref.setStatusGame,
     scopeTime = _ref.scopeTime,
     gameOverCount = _ref.gameOverCount,
     setGameOverCount = _ref.setGameOverCount;
-  var mapTitle = ['УПС...', 'Ой…..', 'GAME OVER', 'Ой-ой…..', 'Ооой…..', 'Ой! :(', 'УПС!'];
-  var mapText = ['А ты знал, что…\n' + 'в QIWI ты спокойно сможешь рассказать команде о любой ошибке или проблеме, попросить совет и задать любой волнующий вопрос даже СЕО на прямом эфире 😉', "\u041F\u043E\u0440\u0430 \u043E\u0442\u0432\u043B\u0435\u0447\u044C\u0441\u044F\u2026\u0438 \u0443\u0437\u043D\u0430\u0442\u044C \u0435\u0449\u0435 \u043A\u043E\u0435-\u0447\u0442\u043E \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E\u0435: \u0432 QIWI \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0430\u043D \u0438 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u0440\u0442\u0430\u043B QAMPUS, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0441\u043E\u0431\u0440\u0430\u043D\u044B \u043A\u043D\u0438\u0433\u0438, \u043B\u0435\u043A\u0446\u0438\u0438, \u0442\u0440\u0435\u043D\u0438\u043D\u0433\u0438, \u043A\u0443\u0440\u0441\u044B \u2028\u0438 \u043C\u043D\u043E\u0433\u043E\u0435 \u0434\u0440\u0443\u0433\u043E\u0435. \u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0438 \u043C\u043E\u0433\u0443\u0442 \u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u2028\u0438\u0445 \u0432 \u0438\u043D\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043B\u044C\u043D\u044B\u0439 \u043F\u043B\u0430\u043D \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F \u043E\u0434\u043D\u0438\u043C \u043A\u043B\u0438\u043A\u043E\u043C \u0438\u043B\u0438 \u0441\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435 \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B \uD83D\uDE09," + 'Еще один важный факт! \n' + "\u0412 QIWI \u0442\u044B \u0441\u043C\u043E\u0436\u0435\u0448\u044C \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E \u043F\u0440\u043E\u043A\u0430\u0447\u0430\u0442\u044C \u0438\u043C\u0435\u044E\u0449\u0438\u0435\u0441\u044F \u0441\u043A\u0438\u043B\u043B\u044B \u2028\u0438\u043B\u0438 \u043F\u0440\u0438\u043E\u0431\u0440\u0435\u0441\u0442\u0438 \u043D\u043E\u0432\u044B\u0435. \u0412 \u0440\u0430\u043C\u043A\u0430\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u043B\u0438\u043C\u0438\u0442\u0430 \u043C\u044B \u043E\u043F\u043B\u0430\u0447\u0438\u0432\u0430\u0435\u043C \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0430\u043C \u0432\u043D\u0435\u0448\u043D\u0435\u0435 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \n" + 'и уроки английского. А для любителей чтения у нас есть три электронные библиотеки 👩🏼‍💻\n', 'А ты знал, что…\n' + 'в QIWI есть корпоративный портал \n' + 'по поддержке ментального здоровья PSY support. \n' + '\n' + 'Ты сможешь обратиться не только \n' + 'к психологу, но и к нутрициологу, коучу, а совсем скоро – и к финансовому консультанту.', 'Кстати, мы регулярно проводим тимбилдинговые активности: полезные завтраки, большие фестивали \n' + 'и корпоративы, образовательные среды с приглашенными экспертами, офисные вечеринки и выездные спринты в горы или на море 💫', 'Мы всегда придумываем интересные активности, например: прошлым летом в QIWI мы пробежали огненную Гонку Героев, сходили на иммерсивную экскурсию по QIWI Дому, провели «Модный приговор», превратили коворкинг в средневековую таверну \n' + 'для вечеринки, организовали кулинарные поединки и мастер-классы (и это далеко не все!).', 'Важный факт: \n' + 'в QIWI целых 15 комьюнити \n' + 'по интересам: спортивных, творческих, интеллектуальных. Кстати, управляют ими сами сотрудники в качестве лидеров сообществ, а QIWI помогает воплотить все их идеи в жизнь.'];
-  function getRandomArrayElement(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
-  }
+  var _useState = (0, _react.useState)(true),
+    _useState2 = _slicedToArray(_useState, 2),
+    linkTg = _useState2[0],
+    setLinkTg = _useState2[1];
   if (localStorage.getItem('State') < scopeTime) localStorage.setItem("State", JSON.stringify(scopeTime));
+  (0, _react.useEffect)(function () {
+    if (gameOverCount % 2 === 1) {
+      setLinkTg(true);
+    } else {
+      setLinkTg(false);
+    }
+  }, [gameOverCount]);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, _textGameOver.default[gameOverCount].body ? /*#__PURE__*/_react.default.createElement("div", {
     className: "endPage"
   }, /*#__PURE__*/_react.default.createElement("img", {
@@ -29408,7 +29420,12 @@ var GameOver = function GameOver(_ref) {
     src: _Line.default
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: 'contNumber'
-  }, /*#__PURE__*/_react.default.createElement("p", null, "\u0420\u0415\u041A\u041E\u0420\u0414"), /*#__PURE__*/_react.default.createElement("span", null, localStorage.getItem('State') ? localStorage.getItem('State') : 0))), /*#__PURE__*/_react.default.createElement("p", null, _textGameOver.default[gameOverCount].body), /*#__PURE__*/_react.default.createElement("button", {
+  }, /*#__PURE__*/_react.default.createElement("p", null, "\u0420\u0415\u041A\u041E\u0420\u0414"), /*#__PURE__*/_react.default.createElement("span", null, localStorage.getItem('State') ? localStorage.getItem('State') : 0))), /*#__PURE__*/_react.default.createElement("p", null, _textGameOver.default[gameOverCount].body), linkTg ? /*#__PURE__*/_react.default.createElement("p", null, "\u0415\u0449\u0451 \u0431\u043E\u043B\u044C\u0448\u0435 \u0444\u0430\u043A\u0442\u043E\u0432 \u043E QIWI \u2014 \u0432 ", /*#__PURE__*/_react.default.createElement("a", {
+    style: {
+      color: 'white'
+    },
+    href: 'https://t.me/+2rYQtq6iig85Mjli'
+  }, "tg-\u043A\u0430\u043D\u0430\u043B\u0435!")) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null), /*#__PURE__*/_react.default.createElement("button", {
     onClick: function onClick() {
       return setStatusGame(true);
     }
@@ -31021,7 +31038,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64672" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52714" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
