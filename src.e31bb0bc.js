@@ -28963,13 +28963,14 @@ var Pipe = function Pipe(_ref) {
   var mapSuper = [_Fire.default, _Lightning.default, _Star.default];
   var windowSize = window.screen.height;
   (0, _react.useEffect)(function () {
-    if (pipes.length > 6) {
-      setScopeTime(pipes.length / 3 - 2);
+    var count = 0;
+    console.log(x);
+    count = count + 1;
+    console.log(count);
+    if (pipes.length > 7) {
+      setScopeTime(pipes.length / 3 - 3);
     }
-  }, [pipes.length]);
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
+  }, [pipes]);
   var imgMini = function imgMini(i) {
     if (superLevel) {
       if (i % 7 === 0) {
@@ -28980,15 +28981,12 @@ var Pipe = function Pipe(_ref) {
         return _Star.default;
       }
     } else if (levelTho) {
-      console.log(2);
       return _Star.default;
     } else {
-      console.log(3);
       return _.default;
     }
   };
   var imgHint = function imgHint(i) {
-    console.log(i % 33);
     if (i % 33 === 0) {
       return mapHint[0];
     } else if (i % 33 === 2) {
@@ -29060,8 +29058,8 @@ var Pipe = function Pipe(_ref) {
         top: topHeight,
         height: 200,
         width: 107,
-        left: x + i * 280
-        // background:'red'
+        left: x + i * 280,
+        background: 'red'
       }
     }), /*#__PURE__*/_react.default.createElement("img", {
       style: {
@@ -29522,7 +29520,6 @@ var Game = function Game(_ref) {
       }
     }
   }, [levelTho, superLevel]);
-  var height = document.documentElement.scrollHeight;
   (0, _react.useEffect)(function () {
     if (ref && ref.current) {
       var handleKeyPress = function handleKeyPress() {
@@ -29607,7 +29604,7 @@ var start = function start() {
         dispatch({
           type: 'GENERATE'
         });
-      }, 4200);
+      }, 4000);
       dispatch({
         type: 'START'
       });
@@ -29636,7 +29633,12 @@ var check = function check(dispatch, getState) {
       return true;
     }
   });
-  if (birdY > window.screen.height - 340) {
+  if (birdY < 0) {
+    dispatch({
+      type: 'GAME_OVER'
+    });
+  }
+  if (birdY > document.documentElement.scrollHeight - 180) {
     dispatch({
       type: 'GAME_OVER'
     });
