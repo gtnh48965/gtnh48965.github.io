@@ -29495,7 +29495,7 @@ var Game = function Game(_ref) {
     clearInterval(pipeGenerator);
   }
   (0, _react.useEffect)(function () {
-    if (scopeTime % 10 === 0) {
+    if (scopeTime % 7 === 0) {
       setLevelTho(function (levelTho) {
         return !levelTho;
       });
@@ -29506,7 +29506,7 @@ var Game = function Game(_ref) {
       setGameOverCount(function (gameOverCount) {
         return gameOverCount + 1;
       });
-      if (gameOverCount > 4) {
+      if (gameOverCount > 10) {
         setSuperLevel(true);
       }
     }
