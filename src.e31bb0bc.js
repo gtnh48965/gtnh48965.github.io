@@ -29361,9 +29361,12 @@ var _ = _interopRequireDefault(require("../images/cloud/gameOver/1.svg"));
 var _2 = _interopRequireDefault(require("../images/cloud/gameOver/2.svg"));
 var _3 = _interopRequireDefault(require("../images/cloud/gameOver/3.svg"));
 var _Line = _interopRequireDefault(require("../images/Line.svg"));
+var _Star = _interopRequireDefault(require("../images/levelTho/Star.svg"));
 var _LinkСopied = _interopRequireDefault(require("./Link\u0421opied"));
 var _GemeOverFeedback = _interopRequireDefault(require("./GemeOverFeedback"));
 var _textGameOver = _interopRequireDefault(require("./textGameOver"));
+var _Lightning = _interopRequireDefault(require("../images/superLevel/Lightning.svg"));
+var _Fire = _interopRequireDefault(require("../images/superLevel/Fire.svg"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -29375,6 +29378,8 @@ function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefine
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var GameOver = function GameOver(_ref) {
   var setStatusGame = _ref.setStatusGame,
+    superLevel = _ref.superLevel,
+    levelTho = _ref.levelTho,
     scopeTime = _ref.scopeTime,
     gameOverCount = _ref.gameOverCount,
     setGameOverCount = _ref.setGameOverCount;
@@ -29392,7 +29397,7 @@ var GameOver = function GameOver(_ref) {
   }, [gameOverCount]);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, _textGameOver.default[gameOverCount].body ? /*#__PURE__*/_react.default.createElement("div", {
     className: "endPage"
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, superLevel ? '' : !levelTho ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("img", {
     className: 'cloud one',
     src: _.default
   }), /*#__PURE__*/_react.default.createElement("img", {
@@ -29401,9 +29406,20 @@ var GameOver = function GameOver(_ref) {
   }), /*#__PURE__*/_react.default.createElement("img", {
     className: 'cloud three',
     src: _3.default
-  }), /*#__PURE__*/_react.default.createElement("span", {
+  })) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("img", {
+    className: 'cloud one',
+    src: _Star.default
+  }), /*#__PURE__*/_react.default.createElement("img", {
+    className: 'cloud two',
+    src: _Star.default
+  }), /*#__PURE__*/_react.default.createElement("img", {
+    className: 'cloud three',
+    src: _Star.default
+  })), /*#__PURE__*/_react.default.createElement("span", {
     className: "textMainApp"
-  }, _textGameOver.default[gameOverCount].title), /*#__PURE__*/_react.default.createElement("div", {
+  }, superLevel && /*#__PURE__*/_react.default.createElement("img", {
+    src: _Lightning.default
+  }), "  ", _textGameOver.default[gameOverCount].title), /*#__PURE__*/_react.default.createElement("div", {
     className: "count"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: 'contNumber'
@@ -29412,7 +29428,20 @@ var GameOver = function GameOver(_ref) {
     src: _Line.default
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: 'contNumber'
-  }, /*#__PURE__*/_react.default.createElement("p", null, "\u0420\u0415\u041A\u041E\u0420\u0414"), /*#__PURE__*/_react.default.createElement("span", null, localStorage.getItem('State') ? localStorage.getItem('State') : 0))), /*#__PURE__*/_react.default.createElement("p", null, _textGameOver.default[gameOverCount].body), linkTg ? /*#__PURE__*/_react.default.createElement("p", null, "\u0415\u0449\u0451 \u0431\u043E\u043B\u044C\u0448\u0435 \u0444\u0430\u043A\u0442\u043E\u0432 \u043E QIWI \u2014 \u0432", /*#__PURE__*/_react.default.createElement("br", null), " ", /*#__PURE__*/_react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("p", null, "\u0420\u0415\u041A\u041E\u0420\u0414"), /*#__PURE__*/_react.default.createElement("span", null, localStorage.getItem('State') ? localStorage.getItem('State') : 0))), /*#__PURE__*/_react.default.createElement("p", null, _textGameOver.default[gameOverCount].body), linkTg ? /*#__PURE__*/_react.default.createElement("p", {
+    style: {
+      position: 'relative'
+    }
+  }, superLevel && /*#__PURE__*/_react.default.createElement("img", {
+    style: {
+      position: 'absolute',
+      right: -50,
+      top: -40,
+      width: 43,
+      height: 55
+    },
+    src: _Fire.default
+  }), "\u0415\u0449\u0451 \u0431\u043E\u043B\u044C\u0448\u0435 \u0444\u0430\u043A\u0442\u043E\u0432 \u043E QIWI \u2014 ", /*#__PURE__*/_react.default.createElement("br", null), "\u0432 ", /*#__PURE__*/_react.default.createElement("a", {
     style: {
       color: 'white'
     },
@@ -29428,7 +29457,7 @@ var GameOver = function GameOver(_ref) {
 };
 var _default = GameOver;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../images/cloud/gameOver/1.svg":"images/cloud/gameOver/1.svg","../images/cloud/gameOver/2.svg":"images/cloud/gameOver/2.svg","../images/cloud/gameOver/3.svg":"images/cloud/gameOver/3.svg","../images/Line.svg":"images/Line.svg","./LinkСopied":"components/LinkСopied.js","./GemeOverFeedback":"components/GemeOverFeedback.js","./textGameOver":"components/textGameOver.js"}],"components/Game.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../images/cloud/gameOver/1.svg":"images/cloud/gameOver/1.svg","../images/cloud/gameOver/2.svg":"images/cloud/gameOver/2.svg","../images/cloud/gameOver/3.svg":"images/cloud/gameOver/3.svg","../images/Line.svg":"images/Line.svg","../images/levelTho/Star.svg":"images/levelTho/Star.svg","./LinkСopied":"components/LinkСopied.js","./GemeOverFeedback":"components/GemeOverFeedback.js","./textGameOver":"components/textGameOver.js","../images/superLevel/Lightning.svg":"images/superLevel/Lightning.svg","../images/superLevel/Fire.svg":"images/superLevel/Fire.svg"}],"components/Game.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29498,7 +29527,7 @@ var Game = function Game(_ref) {
       setGameOverCount(function (gameOverCount) {
         return gameOverCount + 1;
       });
-      if (gameOverCount > 10) {
+      if (gameOverCount > 1) {
         setSuperLevel(true);
       }
     } else {
@@ -29549,6 +29578,8 @@ var Game = function Game(_ref) {
     }
   }, [status]);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, status === 'game-over' ? /*#__PURE__*/_react.default.createElement(_GameOver.default, {
+    superLevel: superLevel,
+    levelTho: levelTho,
     setGameOverCount: setGameOverCount,
     gameOverCount: gameOverCount,
     scopeTime: scopeTime,
@@ -31055,7 +31086,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53308" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59047" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
