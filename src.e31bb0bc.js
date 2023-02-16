@@ -29491,8 +29491,10 @@ var Game = function Game(_ref) {
     clearInterval(pipeGenerator);
   }
   (0, _react.useEffect)(function () {
-    if (scopeTime > 2) {
-      setLevelTho(true);
+    if (scopeTime % 10 === 0) {
+      setLevelTho(function (levelTho) {
+        return !levelTho;
+      });
     }
   }, [scopeTime]);
   (0, _react.useEffect)(function () {
@@ -29537,6 +29539,13 @@ var Game = function Game(_ref) {
       setStatusGame(false);
     }
   }, [statusGame]);
+  (0, _react.useEffect)(function () {
+    if (status === 'playing') {
+      document.body.classList.add('hidden');
+    } else {
+      document.body.classList.remove('hidden');
+    }
+  }, [status]);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, status === 'game-over' ? /*#__PURE__*/_react.default.createElement(_GameOver.default, {
     setGameOverCount: setGameOverCount,
     gameOverCount: gameOverCount,

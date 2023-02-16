@@ -8,6 +8,9 @@ body.levelTho {
 body.superLevel {
   background: #8044C7;
 }
+body.hidden {
+  overflow: hidden;
+}
 
 @font-face {
   font-family: "TT Commons";
@@ -94,7 +97,7 @@ body.superLevel {
   text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .HomePage button {
-  /*margin-bottom: 80px;*/
+  margin-bottom: 80px;
   background: #8044C7;
   border: 1.24971px solid #000000;
   border-radius: 17.496px;
@@ -376,9 +379,5 @@ body.superLevel {
     background-position-x: -1000px;
   }
 }
-@media screen and (max-width: 375px){
-  .HomePage .boxFlex{
-    margin-top: inherit;
-  }
-}
+
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
