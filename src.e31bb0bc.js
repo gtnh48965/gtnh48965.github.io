@@ -29527,7 +29527,7 @@ var Game = function Game(_ref) {
       setGameOverCount(function (gameOverCount) {
         return gameOverCount + 1;
       });
-      if (gameOverCount > 1) {
+      if (gameOverCount > 10) {
         setSuperLevel(true);
       }
     } else {
