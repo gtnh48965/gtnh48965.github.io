@@ -97,7 +97,7 @@ body.hidden {
   text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .HomePage button {
-  margin-bottom: 80px;
+  /*margin-bottom: 80px;*/
   background: #8044C7;
   border: 1.24971px solid #000000;
   border-radius: 17.496px;

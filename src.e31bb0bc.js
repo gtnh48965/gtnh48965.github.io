@@ -29486,6 +29486,10 @@ var Game = function Game(_ref) {
     _useState10 = _slicedToArray(_useState9, 2),
     superLevel = _useState10[0],
     setSuperLevel = _useState10[1];
+  var _useState11 = (0, _react.useState)(0),
+    _useState12 = _slicedToArray(_useState11, 2),
+    windowHeight = _useState12[0],
+    setWindowHeight = _useState12[1];
   if (status === 'game-over') {
     clearInterval(gameLoop);
     clearInterval(pipeGenerator);
@@ -29542,6 +29546,9 @@ var Game = function Game(_ref) {
   (0, _react.useEffect)(function () {
     if (status === 'playing') {
       document.body.classList.add('hidden');
+      var _window = document.documentElement.scrollHeight;
+      setWindowHeight(_window);
+      console.log(_window);
     } else {
       document.body.classList.remove('hidden');
     }
@@ -29554,6 +29561,7 @@ var Game = function Game(_ref) {
   }) : /*#__PURE__*/_react.default.createElement("div", {
     ref: ref,
     style: {
+      maxHeight: "".concat(status !== 'game-over' && windowHeight !== 0 ? windowHeight : '', "px"),
       position: 'relative',
       width: '100%',
       height: '100vh',
@@ -31047,7 +31055,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52714" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64672" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
