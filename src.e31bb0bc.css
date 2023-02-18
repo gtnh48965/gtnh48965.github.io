@@ -78,6 +78,7 @@ body.hidden {
   align-items: center;
 }
 .HomePage p {
+  z-index: 200;
   max-width: 225px;
   font-family: "TT Commons";
   font-style: normal;
@@ -89,6 +90,7 @@ body.hidden {
 }
 .HomePage .textMainApp {
   font-weight: 400;
+  z-index: 200;
   font-size: 62px;
   line-height: 74px;
   font-family: "QIWIPixel-Regular";
@@ -97,7 +99,6 @@ body.hidden {
   text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .HomePage button {
-  margin-bottom: 50px;
   background: #8044C7;
   border: 1.24971px solid #000000;
   border-radius: 17.496px;
@@ -215,7 +216,6 @@ body.hidden {
   text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .endPage button {
-  margin-bottom: 80px;
   font-family: "TT Commons";
   font-style: normal;
   font-weight: 500;
@@ -231,7 +231,6 @@ body.hidden {
   border-radius: 17.496px;
 }
 .endPage .count {
-  margin-bottom: 29px;
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -376,6 +375,14 @@ body.hidden {
   }
   100% {
     background-position-x: -1000px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .HomePage .boxFlex {
+    margin-top: inherit;
+  }
+  .HomePage p {
+    margin-bottom: inherit;
   }
 }
 
