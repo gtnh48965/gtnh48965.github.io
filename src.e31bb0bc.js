@@ -29023,7 +29023,7 @@ var Pipe = function Pipe(_ref) {
     style: {
       position: 'relative'
     }
-  }, pipes.map(function (_ref2, i, index) {
+  }, pipes.map(function (_ref2, i) {
     var topHeight = _ref2.topHeight,
       widthCloud = _ref2.widthCloud,
       widthCloudTop = _ref2.widthCloudTop;
@@ -29059,10 +29059,15 @@ var Pipe = function Pipe(_ref) {
       style: {
         position: 'absolute',
         top: widthCloudTop,
+        height: 'auto',
         width: widthCloud,
         zIndex: 200,
-        left: x + i * 100 + 120
+        left: x * 0.2 + i * 100 + 320,
+        transition: 'left 0.3s,'
+        // transitionDelay: '0.5s',
+        // transitionDuration: '0.4s',
       },
+
       src: imgMini(i)
     }), /*#__PURE__*/_react.default.createElement("img", {
       style: {
@@ -31086,7 +31091,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59047" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53308" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
