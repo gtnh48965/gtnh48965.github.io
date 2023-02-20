@@ -29247,7 +29247,16 @@ var GameOverFeedback = function GameOverFeedback(_ref) {
     className: "endPage"
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "textMainApp"
-  }, "\u0423\u041F\u0421..."), /*#__PURE__*/_react.default.createElement("p", null, "\u041E\u0433\u043E! \u041A\u0430\u043A \u0432\u044B\u0441\u043E\u043A\u043E \u0442\u044B \u0432\u0437\u043B\u0435\u0442\u0435\u043B! \u0410 \u0447\u0442\u043E\u0431\u044B \u0432\u0434\u043E\u0445\u043D\u043E\u0432\u0438\u0442\u044C \u0442\u0435\u0431\u044F \u043F\u043E\u0434\u043D\u044F\u0442\u044C\u0441\u044F \u0435\u0449\u0435 \u0432\u044B\u0448\u0435, QIWI \u0434\u0430\u0440\u0438\u0442 \u043C\u0435\u0440\u0447 \uD83E\uDD29 \u0414\u043B\u044F \u0443\u0447\u0430\u0441\u0442\u0438\u044F \u0432 \u0440\u043E\u0437\u044B\u0433\u0440\u044B\u0448\u0435 \u043D\u0443\u0436\u043D\u043E \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u043D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430. \u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u0431\u0443\u0434\u0435\u043C, \u0442\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u043E\u0431\u044B \u0441\u043E\u043E\u0431\u0449\u0438\u0442\u044C \u0440\u0430\u0434\u043E\u0441\u0442\u043D\u0443\u044E \u043D\u043E\u0432\u043E\u0441\u0442\u044C \uD83D\uDE01"), /*#__PURE__*/_react.default.createElement("div", {
+  }, "\u0423\u041F\u0421..."), /*#__PURE__*/_react.default.createElement("p", {
+    style: {
+      textAlign: 'left'
+    }
+  }, "\u041E\u0433\u043E! \u041A\u0430\u043A \u0432\u044B\u0441\u043E\u043A\u043E \u0442\u044B \u0432\u0437\u043B\u0435\u0442\u0435\u043B! \u0410 \u0447\u0442\u043E\u0431\u044B \u0432\u0434\u043E\u0445\u043D\u043E\u0432\u0438\u0442\u044C \u0442\u0435\u0431\u044F \u043F\u043E\u0434\u043D\u044F\u0442\u044C\u0441\u044F \u0435\u0449\u0435 \u0432\u044B\u0448\u0435, QIWI \u0434\u0430\u0440\u0438\u0442 \u043C\u0435\u0440\u0447 \uD83E\uDD29"), /*#__PURE__*/_react.default.createElement("p", {
+    style: {
+      textAlign: 'left',
+      marginBottom: 60
+    }
+  }, "\u0414\u043B\u044F \u0443\u0447\u0430\u0441\u0442\u0438\u044F \u0432 \u0440\u043E\u0437\u044B\u0433\u0440\u044B\u0448\u0435 \u043D\u0443\u0436\u043D\u043E \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u043D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430. \u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u0431\u0443\u0434\u0435\u043C, \u0442\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u043E\u0431\u044B \u0441\u043E\u043E\u0431\u0449\u0438\u0442\u044C \u0440\u0430\u0434\u043E\u0441\u0442\u043D\u0443\u044E \u043D\u043E\u0432\u043E\u0441\u0442\u044C \uD83D\uDE01"), /*#__PURE__*/_react.default.createElement("div", {
     className: 'inputFeedbackWrap'
   }, /*#__PURE__*/_react.default.createElement("input", {
     className: 'inputFeedback',
@@ -29261,13 +29270,15 @@ var GameOverFeedback = function GameOverFeedback(_ref) {
     },
     style: {
       padding: '18px 36px',
-      fontSize: '26'
+      fontSize: '26',
+      marginTop: 20
     }
   }, "\u041E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u043D\u043E\u043C\u0435\u0440"), /*#__PURE__*/_react.default.createElement("a", {
     onClick: close,
     style: {
       color: 'white',
-      textDecoration: 'underline'
+      textDecoration: 'underline',
+      marginTop: 16
     }
   }, "\u041F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0442\u044C"), /*#__PURE__*/_react.default.createElement(_LinkСopied.default, {
     openModal: openModal,
@@ -29400,7 +29411,7 @@ var GameOver = function GameOver(_ref) {
       setLinkTg(false);
     }
   }, [gameOverCount]);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, _textGameOver.default[gameOverCount].body ? /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, _textGameOver.default[gameOverCount] ? /*#__PURE__*/_react.default.createElement("div", {
     className: "endPage"
   }, superLevel ? '' : !levelTho ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("img", {
     className: 'cloud one',
@@ -31091,7 +31102,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53308" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59047" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
