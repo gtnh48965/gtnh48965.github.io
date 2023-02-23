@@ -138,6 +138,7 @@ body.hidden {
   align-items: center;
 }
 .Plug .blockText .title {
+  z-index: 2000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -324,6 +325,7 @@ body.hidden {
 }
 .inputFeedback {
   width: 100%;
+  max-width: 100%;
   height: 65.58px;
   background: #FFFFFF;
   border-radius: 7.88918px;
