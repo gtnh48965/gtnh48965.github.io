@@ -73,6 +73,7 @@ body.hidden {
   width: 70%;
 }
 .HomePage .boxFlex {
+  margin-top: 56px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,11 +118,17 @@ body.hidden {
 .Plug {
   display: flex;
 }
+.Plug .qr {
+  padding: 31px;
+  background: #FFFFFF;
+  border-radius: 40px;
+}
 .Plug img {
   position: absolute;
   bottom: 0;
 }
 .Plug .textMainApp {
+  z-index: 200;
   text-align: center;
   font-weight: 400;
   font-size: 62px;
@@ -133,9 +140,11 @@ body.hidden {
 }
 .Plug .blockText {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .Plug .blockText .title {
   z-index: 2000;
@@ -207,6 +216,7 @@ body.hidden {
   color: #FFFFFF;
 }
 .endPage .textMainApp {
+  z-index: 200;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -235,6 +245,7 @@ body.hidden {
 }
 .endPage .count {
   display: flex;
+  z-index: 100;
   width: 100%;
   justify-content: space-around;
 }
@@ -387,6 +398,35 @@ body.hidden {
   }
   .HomePage p {
     margin-bottom: inherit;
+  }
+}
+@media screen and (max-width: 320px) {
+  .endPage .count img {
+    max-height: 90px;
+  }
+  .endPage .count .contNumber p {
+    font-size: 18px;
+  }
+  .endPage .count p {
+    margin: 0;
+    font-size: 15px;
+  }
+  .endPage .count span {
+    font-size: 40px;
+  }
+  .endPage button {
+    padding: 10px 50px 10px 50px;
+    font-size: 20px;
+  }
+  .endPage p {
+    font-size: 14px;
+  }
+  .endPage .textMainApp {
+    font-size: 52px;
+    margin-top: inherit;
+  }
+  .HomePage .boxFlex {
+    margin-top: 6px;
   }
 }
 
