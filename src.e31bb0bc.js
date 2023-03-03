@@ -31910,8 +31910,8 @@ var _shallowEqual = _interopRequireDefault(require("./utils/shallowEqual"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _batch.setBatch)(_reactBatchedUpdates.unstable_batchedUpdates);
-},{"./components/Provider":"../node_modules/react-redux/es/components/Provider.js","./components/connectAdvanced":"../node_modules/react-redux/es/components/connectAdvanced.js","./components/Context":"../node_modules/react-redux/es/components/Context.js","./connect/connect":"../node_modules/react-redux/es/connect/connect.js","./hooks/useDispatch":"../node_modules/react-redux/es/hooks/useDispatch.js","./hooks/useSelector":"../node_modules/react-redux/es/hooks/useSelector.js","./hooks/useStore":"../node_modules/react-redux/es/hooks/useStore.js","./utils/batch":"../node_modules/react-redux/es/utils/batch.js","./utils/reactBatchedUpdates":"../node_modules/react-redux/es/utils/reactBatchedUpdates.js","./utils/shallowEqual":"../node_modules/react-redux/es/utils/shallowEqual.js"}],"images/birdimg.svg":[function(require,module,exports) {
-module.exports = "/birdimg.f28a9d0b.svg";
+},{"./components/Provider":"../node_modules/react-redux/es/components/Provider.js","./components/connectAdvanced":"../node_modules/react-redux/es/components/connectAdvanced.js","./components/Context":"../node_modules/react-redux/es/components/Context.js","./connect/connect":"../node_modules/react-redux/es/connect/connect.js","./hooks/useDispatch":"../node_modules/react-redux/es/hooks/useDispatch.js","./hooks/useSelector":"../node_modules/react-redux/es/hooks/useSelector.js","./hooks/useStore":"../node_modules/react-redux/es/hooks/useStore.js","./utils/batch":"../node_modules/react-redux/es/utils/batch.js","./utils/reactBatchedUpdates":"../node_modules/react-redux/es/utils/reactBatchedUpdates.js","./utils/shallowEqual":"../node_modules/react-redux/es/utils/shallowEqual.js"}],"images/birdImg1.svg":[function(require,module,exports) {
+module.exports = "/birdImg1.7231970e.svg";
 },{}],"images/birds2.svg":[function(require,module,exports) {
 module.exports = "/birds2.b730ee49.svg";
 },{}],"components/Bird.js":[function(require,module,exports) {
@@ -31926,7 +31926,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRedux = require("react-redux");
 
-var _birdimg = _interopRequireDefault(require("../images/birdimg.svg"));
+var _birdImg = _interopRequireDefault(require("../images/birdImg1.svg"));
 
 var _birds = _interopRequireDefault(require("../images/birds2.svg"));
 
@@ -31950,7 +31950,7 @@ var Bird = function Bird(_ref) {
       zIndex: 1000,
       backgroundSize: 'cover',
       // background:'red',
-      backgroundImage: r === 0 ? "url(".concat(_birdimg.default, ")") : "url(".concat(_birds.default, ")"),
+      backgroundImage: r === 0 ? "url(".concat(_birdImg.default, ")") : "url(".concat(_birds.default, ")"),
       backgroundRepeat: 'no-repeat',
       // transform: `rotate(${r}deg)`,
       transition: 'transform 100ms, top 300ms'
@@ -31971,7 +31971,7 @@ var mapDispatchToProps = {};
 var _default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Bird);
 
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-redux":"../node_modules/react-redux/es/index.js","../images/birdimg.svg":"images/birdimg.svg","../images/birds2.svg":"images/birds2.svg"}],"images/pipe-top.svg":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-redux":"../node_modules/react-redux/es/index.js","../images/birdImg1.svg":"images/birdImg1.svg","../images/birds2.svg":"images/birds2.svg"}],"images/pipe-top.svg":[function(require,module,exports) {
 module.exports = "/pipe-top.f6d0c019.svg";
 },{}],"images/levelTho/TopPipeImage2.svg":[function(require,module,exports) {
 module.exports = "/TopPipeImage2.7926c2c2.svg";
@@ -33538,9 +33538,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../public/fonts/secondFonts/TTCommons-Regular.eot":[["TTCommons-Regular.2dc00d94.eot","../public/fonts/secondFonts/TTCommons-Regular.eot"],"../public/fonts/secondFonts/TTCommons-Regular.eot"],"./../../public/fonts/secondFonts/TTCommons-Regular.woff2":[["TTCommons-Regular.ebf27aa7.woff2","../public/fonts/secondFonts/TTCommons-Regular.woff2"],"../public/fonts/secondFonts/TTCommons-Regular.woff2"],"./../../public/fonts/secondFonts/TTCommons-Regular.woff":[["TTCommons-Regular.9167f049.woff","../public/fonts/secondFonts/TTCommons-Regular.woff"],"../public/fonts/secondFonts/TTCommons-Regular.woff"],"./../../public/fonts/secondFonts/TTCommons-Regular.ttf":[["TTCommons-Regular.e4495d1b.ttf","../public/fonts/secondFonts/TTCommons-Regular.ttf"],"../public/fonts/secondFonts/TTCommons-Regular.ttf"],"./../../public/fonts/QIWIPixel-Regular.otf":[["QIWIPixel-Regular.eae26410.otf","../public/fonts/QIWIPixel-Regular.otf"],"../public/fonts/QIWIPixel-Regular.otf"],"./../../public/fonts/secondFonts/TTCommons-Medium.eot":[["TTCommons-Medium.5b1ecd30.eot","../public/fonts/secondFonts/TTCommons-Medium.eot"],"../public/fonts/secondFonts/TTCommons-Medium.eot"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"images/cloud/home/1.svg":[function(require,module,exports) {
-module.exports = "/1.1ed9a0d1.svg";
-},{}],"images/cloud/home/2.svg":[function(require,module,exports) {
+},{"./../../public/fonts/secondFonts/TTCommons-Regular.eot":[["TTCommons-Regular.2dc00d94.eot","../public/fonts/secondFonts/TTCommons-Regular.eot"],"../public/fonts/secondFonts/TTCommons-Regular.eot"],"./../../public/fonts/secondFonts/TTCommons-Regular.woff2":[["TTCommons-Regular.ebf27aa7.woff2","../public/fonts/secondFonts/TTCommons-Regular.woff2"],"../public/fonts/secondFonts/TTCommons-Regular.woff2"],"./../../public/fonts/secondFonts/TTCommons-Regular.woff":[["TTCommons-Regular.9167f049.woff","../public/fonts/secondFonts/TTCommons-Regular.woff"],"../public/fonts/secondFonts/TTCommons-Regular.woff"],"./../../public/fonts/secondFonts/TTCommons-Regular.ttf":[["TTCommons-Regular.e4495d1b.ttf","../public/fonts/secondFonts/TTCommons-Regular.ttf"],"../public/fonts/secondFonts/TTCommons-Regular.ttf"],"./../../public/fonts/QIWIPixel-Regular.otf":[["QIWIPixel-Regular.eae26410.otf","../public/fonts/QIWIPixel-Regular.otf"],"../public/fonts/QIWIPixel-Regular.otf"],"./../../public/fonts/secondFonts/TTCommons-Medium.eot":[["TTCommons-Medium.5b1ecd30.eot","../public/fonts/secondFonts/TTCommons-Medium.eot"],"../public/fonts/secondFonts/TTCommons-Medium.eot"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"images/cloud/home/2.svg":[function(require,module,exports) {
 module.exports = "/2.9c445f20.svg";
 },{}],"images/cloud/home/4.svg":[function(require,module,exports) {
 module.exports = "/4.d2d9d442.svg";
@@ -33558,19 +33556,16 @@ var _react = _interopRequireDefault(require("react"));
 
 require("./index.scss");
 
-var _ = _interopRequireDefault(require("../images/cloud/home/1.svg"));
+var _ = _interopRequireDefault(require("../images/cloud/home/2.svg"));
 
-var _2 = _interopRequireDefault(require("../images/cloud/home/2.svg"));
+var _2 = _interopRequireDefault(require("../images/cloud/home/3.svg"));
 
-var _3 = _interopRequireDefault(require("../images/cloud/home/3.svg"));
-
-var _4 = _interopRequireDefault(require("../images/cloud/home/4.svg"));
+var _3 = _interopRequireDefault(require("../images/cloud/home/4.svg"));
 
 var _birdHome = _interopRequireDefault(require("../images/birdHome.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import BirdImage from '../images/birdimg.svg'
 // import {Link} from "react-router-dom";
 var HomePage = function HomePage(_ref) {
   var setOpenGame = _ref.setOpenGame;
@@ -33578,16 +33573,16 @@ var HomePage = function HomePage(_ref) {
     className: "HomePage"
   }, /*#__PURE__*/_react.default.createElement("img", {
     className: 'cloud one',
-    src: _3.default
-  }), /*#__PURE__*/_react.default.createElement("img", {
-    className: 'cloud two',
     src: _2.default
   }), /*#__PURE__*/_react.default.createElement("img", {
+    className: 'cloud two',
+    src: _.default
+  }), /*#__PURE__*/_react.default.createElement("img", {
     className: 'cloud three',
-    src: _3.default
+    src: _2.default
   }), /*#__PURE__*/_react.default.createElement("img", {
     className: 'cloud four',
-    src: _4.default
+    src: _3.default
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "boxFlex"
   }, /*#__PURE__*/_react.default.createElement("span", {
@@ -33607,7 +33602,7 @@ var HomePage = function HomePage(_ref) {
 
 var _default = HomePage;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./index.scss":"components/index.scss","../images/cloud/home/1.svg":"images/cloud/home/1.svg","../images/cloud/home/2.svg":"images/cloud/home/2.svg","../images/cloud/home/3.svg":"images/cloud/home/3.svg","../images/cloud/home/4.svg":"images/cloud/home/4.svg","../images/birdHome.svg":"images/birdHome.svg"}],"../node_modules/ua-parser-js/dist/ua-parser.min.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./index.scss":"components/index.scss","../images/cloud/home/2.svg":"images/cloud/home/2.svg","../images/cloud/home/3.svg":"images/cloud/home/3.svg","../images/cloud/home/4.svg":"images/cloud/home/4.svg","../images/birdHome.svg":"images/birdHome.svg"}],"../node_modules/ua-parser-js/dist/ua-parser.min.js":[function(require,module,exports) {
 var define;
 /* UAParser.js v1.0.33
    Copyright © 2012-2021 Faisal Salman <f@faisalman.com>
