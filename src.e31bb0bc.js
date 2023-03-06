@@ -32588,32 +32588,48 @@ var Pipe = function Pipe(_ref) {
       pipes = _ref.pipes,
       setScopeTime = _ref.setScopeTime,
       superLevel = _ref.superLevel,
-      levelTho = _ref.levelTho;
-  var mapHint = [_hint.default, _hint2.default, _hint3.default, _hint4.default, _hint5.default, _hint6.default, _hint7.default, _hint7.default, _hint8.default, _hint9.default, _hint10.default, _hint11.default];
-  var windowSize = window.screen.height;
+      levelTho = _ref.levelTho,
+      mapHint = _ref.mapHint;
 
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
-      count = _useState2[0],
-      setCount = _useState2[1];
+      indexMapHint = _useState2[0],
+      setIndexMapHint = _useState2[1];
+
+  var windowSize = window.screen.height;
+
+  var _useState3 = (0, _react.useState)(0),
+      _useState4 = _slicedToArray(_useState3, 2),
+      count = _useState4[0],
+      setCount = _useState4[1];
+
+  var _useState5 = (0, _react.useState)(0),
+      _useState6 = _slicedToArray(_useState5, 2),
+      countHint = _useState6[0],
+      setCountHint = _useState6[1];
 
   (0, _react.useEffect)(function () {
-    console.log(document.getElementsByClassName('listPipe'));
-
     if (document.getElementsByClassName('listPipe')[count]) {
       if (document.getElementsByClassName('listPipe')[count].getBoundingClientRect().left < 200) {
         setCount(function (count) {
           return count + 1;
         });
-        console.log(count);
         setScopeTime(count);
       }
     }
   });
   (0, _react.useEffect)(function () {
-    if (pipes.length > 7) {// setScopeTime((pipes.length / 3) - 3)
+    // console.log(document.getElementsByClassName('hint'))
+    if (document.getElementsByClassName('hint')[countHint * 4]) {
+      if (document.getElementsByClassName('hint')[countHint * 4].getBoundingClientRect().left < 100) {
+        setCountHint(function (countHint) {
+          return countHint + 1;
+        }); // setScopeTime(count)
+
+        console.log(countHint);
+      }
     }
-  }, [pipes]);
+  });
 
   var imgMini = function imgMini(i) {
     if (superLevel) {
@@ -32631,29 +32647,16 @@ var Pipe = function Pipe(_ref) {
     }
   };
 
+  (0, _react.useEffect)(function () {
+    if (count % 3 === 0) setIndexMapHint(function (indexMapHint) {
+      return indexMapHint + 1;
+    });
+    console.log(222);
+  }, [count]);
+
   var imgHint = function imgHint(i) {
-    if (i % 33 === 0) {
-      return mapHint[0];
-    } else if (i % 33 === 2) {
-      return mapHint[1];
-    } else if (i % 33 === 3) {
-      return mapHint[2];
-    } else if (i % 33 === 5) {
-      return mapHint[3];
-    } else if (i % 33 === 17) {
-      return mapHint[4];
-    } else if (i % 33 === 20) {
-      return mapHint[5];
-    } else if (i % 33 === 22) {
-      return mapHint[6];
-    } else if (i % 33 === 25) {
-      return mapHint[7];
-    } else if (i % 33 === 27) {
-      return mapHint[8];
-    } else if (i % 33 === 29) {
-      return mapHint[9];
-    } else if (i % 33 === 32) {
-      return mapHint[10];
+    if (i % 4 === 0) {
+      return mapHint[countHint];
     }
   };
 
@@ -32690,8 +32693,7 @@ var Pipe = function Pipe(_ref) {
         top: topHeight,
         height: 200,
         width: 107,
-        left: x + i * 300 // background: 'red'
-
+        left: x + i * 300
       }
     }), /*#__PURE__*/_react.default.createElement("img", {
       style: {
@@ -32701,16 +32703,14 @@ var Pipe = function Pipe(_ref) {
         width: widthCloud,
         zIndex: 200,
         left: x * 0.2 + i * 100 + 320,
-        transition: 'left 0.3s,' // transitionDelay: '0.5s',
-        // transitionDuration: '0.4s',
-
+        transition: 'left 0.3s,'
       },
       src: imgMini(i)
     }), /*#__PURE__*/_react.default.createElement("img", {
+      className: imgHint(i) ? 'hint' : '',
       style: {
         position: 'absolute',
         top: topHeight + 100,
-        // width: widthCloud,
         height: 'auto',
         zIndex: 320,
         bottom: 0,
@@ -33068,8 +33068,6 @@ var _Line = _interopRequireDefault(require("../images/Line.svg"));
 
 var _Star = _interopRequireDefault(require("../images/levelTho/Star.svg"));
 
-var _LinkСopied = _interopRequireDefault(require("./Link\u0421opied"));
-
 var _GemeOverFeedback = _interopRequireDefault(require("./GemeOverFeedback"));
 
 var _textGameOver = _interopRequireDefault(require("./textGameOver"));
@@ -33180,7 +33178,7 @@ var GameOver = function GameOver(_ref) {
 
 var _default = GameOver;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../images/cloud/gameOver/1.svg":"images/cloud/gameOver/1.svg","../images/cloud/gameOver/2.svg":"images/cloud/gameOver/2.svg","../images/cloud/gameOver/3.svg":"images/cloud/gameOver/3.svg","../images/Line.svg":"images/Line.svg","../images/levelTho/Star.svg":"images/levelTho/Star.svg","./LinkСopied":"components/LinkСopied.js","./GemeOverFeedback":"components/GemeOverFeedback.js","./textGameOver":"components/textGameOver.js","../images/superLevel/Lightning.svg":"images/superLevel/Lightning.svg","../images/superLevel/Fire.svg":"images/superLevel/Fire.svg"}],"components/Game.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../images/cloud/gameOver/1.svg":"images/cloud/gameOver/1.svg","../images/cloud/gameOver/2.svg":"images/cloud/gameOver/2.svg","../images/cloud/gameOver/3.svg":"images/cloud/gameOver/3.svg","../images/Line.svg":"images/Line.svg","../images/levelTho/Star.svg":"images/levelTho/Star.svg","./GemeOverFeedback":"components/GemeOverFeedback.js","./textGameOver":"components/textGameOver.js","../images/superLevel/Lightning.svg":"images/superLevel/Lightning.svg","../images/superLevel/Fire.svg":"images/superLevel/Fire.svg"}],"components/Game.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33201,6 +33199,28 @@ var _Foreground = _interopRequireDefault(require("./Foreground"));
 var _Score = _interopRequireDefault(require("./Score"));
 
 var _GameOver = _interopRequireDefault(require("./GameOver"));
+
+var _hint = _interopRequireDefault(require("../images/hint/hint1.svg"));
+
+var _hint2 = _interopRequireDefault(require("../images/hint/hint2.svg"));
+
+var _hint3 = _interopRequireDefault(require("../images/hint/hint3.svg"));
+
+var _hint4 = _interopRequireDefault(require("../images/hint/hint4.svg"));
+
+var _hint5 = _interopRequireDefault(require("../images/hint/hint5.svg"));
+
+var _hint6 = _interopRequireDefault(require("../images/hint/hint6.svg"));
+
+var _hint7 = _interopRequireDefault(require("../images/hint/hint7.svg"));
+
+var _hint8 = _interopRequireDefault(require("../images/hint/hint8.svg"));
+
+var _hint9 = _interopRequireDefault(require("../images/hint/hint9.svg"));
+
+var _hint10 = _interopRequireDefault(require("../images/hint/hint10.svg"));
+
+var _hint11 = _interopRequireDefault(require("../images/hint/hint11.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33227,6 +33247,7 @@ var Game = function Game(_ref) {
   var status = _ref.status,
       start = _ref.start,
       fly = _ref.fly;
+  var mapHint = [_hint.default, _hint2.default, _hint3.default, _hint4.default, _hint5.default, _hint6.default, _hint7.default, _hint7.default, _hint8.default, _hint9.default, _hint10.default, _hint11.default];
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -33350,6 +33371,7 @@ var Game = function Game(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_Score.default, {
     scopeTime: scopeTime
   }), /*#__PURE__*/_react.default.createElement(_Bird.default, null), /*#__PURE__*/_react.default.createElement(_Pipe.default, {
+    mapHint: mapHint,
     superLevel: superLevel,
     levelTho: levelTho,
     scopeTime: scopeTime,
@@ -33386,7 +33408,7 @@ var start = function start() {
         dispatch({
           type: 'GENERATE'
         });
-      }, 500);
+      }, 2000);
       dispatch({
         type: 'START'
       });
@@ -33460,7 +33482,7 @@ var mapDispatchToProps = {
 var _default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Game);
 
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-redux":"../node_modules/react-redux/es/index.js","./Bird":"components/Bird.js","./Pipe":"components/Pipe.js","./Foreground":"components/Foreground.js","./Score":"components/Score.js","./GameOver":"components/GameOver.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-redux":"../node_modules/react-redux/es/index.js","./Bird":"components/Bird.js","./Pipe":"components/Pipe.js","./Foreground":"components/Foreground.js","./Score":"components/Score.js","./GameOver":"components/GameOver.js","../images/hint/hint1.svg":"images/hint/hint1.svg","../images/hint/hint2.svg":"images/hint/hint2.svg","../images/hint/hint3.svg":"images/hint/hint3.svg","../images/hint/hint4.svg":"images/hint/hint4.svg","../images/hint/hint5.svg":"images/hint/hint5.svg","../images/hint/hint6.svg":"images/hint/hint6.svg","../images/hint/hint7.svg":"images/hint/hint7.svg","../images/hint/hint8.svg":"images/hint/hint8.svg","../images/hint/hint9.svg":"images/hint/hint9.svg","../images/hint/hint10.svg":"images/hint/hint10.svg","../images/hint/hint11.svg":"images/hint/hint11.svg"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -35909,7 +35931,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51126" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49306" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
