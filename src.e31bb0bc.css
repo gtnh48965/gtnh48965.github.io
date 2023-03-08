@@ -207,6 +207,14 @@ body.hidden {
   top: 108px;
   right: 0;
 }
+.endPage .Skip {
+  color: white;
+  text-decoration: underline;
+  margin-top: 16px;
+  font-family: "TT Commons";
+  font-style: normal;
+  font-weight: 400;
+}
 .endPage p {
   max-width: 280px;
   font-family: "TT Commons";

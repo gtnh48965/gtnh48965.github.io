@@ -32619,13 +32619,13 @@ var Pipe = function Pipe(_ref) {
     }
   });
   (0, _react.useEffect)(function () {
-    // console.log(document.getElementsByClassName('hint'))
-    if (document.getElementsByClassName('hint')[countHint * 4]) {
-      if (document.getElementsByClassName('hint')[countHint * 4].getBoundingClientRect().left < 100) {
+    console.log(countHint);
+
+    if (document.getElementsByClassName('hint')[count]) {
+      if (document.getElementsByClassName('hint')[count].getBoundingClientRect().left < 0) {
         setCountHint(function (countHint) {
           return countHint + 1;
-        }); // setScopeTime(count)
-
+        });
         console.log(countHint);
       }
     }
@@ -32647,17 +32647,8 @@ var Pipe = function Pipe(_ref) {
     }
   };
 
-  (0, _react.useEffect)(function () {
-    if (count % 3 === 0) setIndexMapHint(function (indexMapHint) {
-      return indexMapHint + 1;
-    });
-    console.log(222);
-  }, [count]);
-
   var imgHint = function imgHint(i) {
-    if (i % 4 === 0) {
-      return mapHint[countHint];
-    }
+    if (i % 4 === 0) return mapHint[countHint];
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -32707,7 +32698,7 @@ var Pipe = function Pipe(_ref) {
       },
       src: imgMini(i)
     }), /*#__PURE__*/_react.default.createElement("img", {
-      className: imgHint(i) ? 'hint' : '',
+      className: 'hint',
       style: {
         position: 'absolute',
         top: topHeight + 100,
@@ -32954,6 +32945,7 @@ var GameOverFeedback = function GameOverFeedback(_ref) {
     }
   }, "\u041E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u043D\u043E\u043C\u0435\u0440"), /*#__PURE__*/_react.default.createElement("a", {
     onClick: close,
+    className: 'Skip',
     style: {
       color: 'white',
       textDecoration: 'underline',
@@ -33043,7 +33035,7 @@ var TextGameOver = [{
   bodyLink: ''
 }, {
   title: 'Эх! :(',
-  body: 'В QIWI тоже начиналась с малого, \n' + 'но сейчас у компании целых \n' + '13 000 бизнес-партнеров, 29 млн клиентов, 144 млрд переводов денежных средств в месяц, и 1900+ сотрудников. \n' + 'И, конечно, это не предел!',
+  body: 'В QIWI тоже начиналась с малого, \n' + 'но сейчас у компании целых \n' + '13 000 бизнес-партнеров, 29 млн клиентов, 144 млрд руб оборота в месяц и 1900+ сотрудников. \n' + 'И, конечно, это не предел! \n',
   bodyLink: ''
 }];
 var _default = TextGameOver;
@@ -33249,7 +33241,7 @@ var Game = function Game(_ref) {
       fly = _ref.fly;
   var mapHint = [_hint.default, _hint2.default, _hint3.default, _hint4.default, _hint5.default, _hint6.default, _hint7.default, _hint7.default, _hint8.default, _hint9.default, _hint10.default, _hint11.default];
 
-  var _useState = (0, _react.useState)(false),
+  var _useState = (0, _react.useState)(true),
       _useState2 = _slicedToArray(_useState, 2),
       statusGame = _useState2[0],
       setStatusGame = _useState2[1];
@@ -33331,16 +33323,13 @@ var Game = function Game(_ref) {
     }
   }, [statusGame]);
   (0, _react.useEffect)(function () {
-    if (statusGame === true) {
-      setScopeTime(0);
-      start();
-    }
-
     if (status === 'game-over') {
-      setLevelTho(false);
       setStatusGame(false);
+    } else {
+      setStatusGame(true);
+      setScopeTime(0);
     }
-  }, [statusGame]);
+  }, [status]);
   (0, _react.useEffect)(function () {
     var window = document.documentElement.scrollHeight;
     setWindowHeight(window);
@@ -33352,7 +33341,7 @@ var Game = function Game(_ref) {
       document.body.classList.remove('hidden');
     }
   }, [status]);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, status === 'game-over' ? /*#__PURE__*/_react.default.createElement(_GameOver.default, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !statusGame ? /*#__PURE__*/_react.default.createElement(_GameOver.default, {
     superLevel: superLevel,
     levelTho: levelTho,
     setGameOverCount: setGameOverCount,
@@ -35931,7 +35920,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49306" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56986" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
