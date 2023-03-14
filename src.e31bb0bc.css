@@ -441,6 +441,7 @@ body.hidden {
 }
 
 .inputFeedbackWrap {
+  margin-right: 10px;
   position: relative;
   width: 100%;
 }
