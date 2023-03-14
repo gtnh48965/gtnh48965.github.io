@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   transition: background 0.5s ease;
   background: #45B3E9;
@@ -147,7 +148,7 @@ body.hidden {
   justify-content: center;
 }
 .Plug .blockText .title {
-  z-index: 2000;
+  z-index: 200;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -249,9 +250,12 @@ body.hidden {
   text-align: center;
   padding: 15px 93px 15px 93px;
   color: #FFFFFF;
-  background: #FF8000;
+  background: rgba(243, 137, 34, 0.47);
   border: 1.24971px solid #FFFFFF;
   border-radius: 17.496px;
+}
+.endPage button.submitForm {
+  background: #FF8000;
 }
 .endPage .count {
   display: flex;
@@ -274,6 +278,65 @@ body.hidden {
 }
 .endPage .count .contNumber p {
   font-size: 24px;
+}
+.endPage .checkbox {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  font-family: "TT Commons";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 9.86148px;
+  line-height: 11px;
+  color: #FFFFFF;
+  /* стили для активного состояния чекбокса (при нажатии на него) */
+  /* стили для чекбокса, находящегося в фокусе */
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  /* стили для чекбокса, находящегося в состоянии disabled */
+}
+.endPage .checkbox .custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.endPage .checkbox .custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.endPage .checkbox .custom-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.endPage .checkbox .custom-checkbox:checked + label::before {
+  border-color: #FF8000;
+  background-color: #FF8000;
+}
+.endPage .checkbox .custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #b3d7ff;
+}
+.endPage .checkbox .custom-checkbox:not(:disabled):active + label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+.endPage .checkbox .custom-checkbox:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.endPage .checkbox .custom-checkbox:focus:not(:checked) + label::before {
+  border-color: #80bdff;
+}
+.endPage .checkbox .custom-checkbox:disabled + label::before {
+  background-color: #e9ecef;
 }
 
 .score {
