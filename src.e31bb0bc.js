@@ -39428,7 +39428,6 @@ var HomePage = function HomePage(_ref) {
     onClick: function onClick() {
       ym(92660060, 'reachGoal', 'start');
       setOpenGame(true);
-      console.log('click');
     }
   }, "\u0418\u0433\u0440\u0430\u0442\u044C"));
 }; //
@@ -41733,7 +41732,6 @@ var App = function App(_ref) {
     });
   }
 
-  console.log(22222);
   return /*#__PURE__*/_react.default.createElement(_reactRedux.Provider, {
     store: store
   }, _reactDeviceDetect.isMobile ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, openGame ? /*#__PURE__*/_react.default.createElement(_Game.default, {
