@@ -38895,6 +38895,8 @@ var GameOver = function GameOver(_ref) {
 
   if (localStorage.getItem('State') < scopeTime) localStorage.setItem("State", JSON.stringify(scopeTime));
   (0, _react.useEffect)(function () {
+    ym(92660060, 'reachGoal', "d".concat(gameOverCount));
+
     if (gameOverCount % 2 === 1) {
       setLinkTg(true);
     } else {
@@ -38950,6 +38952,9 @@ var GameOver = function GameOver(_ref) {
   }), "\u0415\u0449\u0451 \u0431\u043E\u043B\u044C\u0448\u0435 \u0444\u0430\u043A\u0442\u043E\u0432 \u043E QIWI \u2014 ", /*#__PURE__*/_react.default.createElement("br", null), "\u0432 ", /*#__PURE__*/_react.default.createElement("a", {
     style: {
       color: 'white'
+    },
+    onClick: function onClick() {
+      ym(92660060, 'reachGoal', 'tg');
     },
     href: 'https://t.me/+2rYQtq6iig85Mjli'
   }, "tg-\u043A\u0430\u043D\u0430\u043B\u0435!")) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null), /*#__PURE__*/_react.default.createElement("button", {
@@ -39420,7 +39425,9 @@ var HomePage = function HomePage(_ref) {
     src: _birdHome.default
   })), /*#__PURE__*/_react.default.createElement("button", {
     onClick: function onClick() {
+      ym(92660060, 'reachGoal', 'start');
       setOpenGame(true);
+      console.log('click');
     }
   }, "\u0418\u0433\u0440\u0430\u0442\u044C"));
 }; //
@@ -41782,7 +41789,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65435" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59666" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
