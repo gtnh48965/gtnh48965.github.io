@@ -38663,6 +38663,7 @@ var GameOverFeedback = function GameOverFeedback(_ref) {
       setOpenModal = _useState6[1];
 
   function submitHandler(e) {
+    ym(92660060, 'reachGoal', 'phone');
     e.preventDefault();
 
     _axios.default.post('https://api.sheetmonkey.io/form/txYPdUgDvHDSWbgBbqt7WU', {
@@ -38729,7 +38730,7 @@ var GameOverFeedback = function GameOverFeedback(_ref) {
     href: 'https://fut.ru/personal_data_policy/'
   }, "\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0443 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445"), " \u0438 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0445 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0439"))), /*#__PURE__*/_react.default.createElement("button", {
     className: checkbox && number && String(number).length > 10 ? "submitForm" : '',
-    onClick: checkbox && number && String(number) ? submitHandler : '',
+    onClick: checkbox && number && String(number) > 10 ? submitHandler : '',
     style: {
       padding: '18px 36px',
       fontSize: '26',
