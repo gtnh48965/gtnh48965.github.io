@@ -74,7 +74,7 @@ body.hidden {
   width: 70%;
 }
 .HomePage .boxFlex {
-  margin-top: 56px;
+  margin-top: 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,7 +85,7 @@ body.hidden {
   font-family: "TT Commons";
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 26px;
   text-align: center;
   color: #FFFFFF;
@@ -93,8 +93,8 @@ body.hidden {
 .HomePage .textMainApp {
   font-weight: 400;
   z-index: 200;
-  font-size: 62px;
-  line-height: 74px;
+  font-size: 55px;
+  line-height: 63px;
   font-family: "QIWIPixel-Regular";
   color: white;
   -webkit-text-stroke: 1px black;
@@ -217,7 +217,7 @@ body.hidden {
   font-weight: 400;
 }
 .endPage p {
-  max-width: 280px;
+  max-width: 298px;
   font-family: "TT Commons";
   font-style: normal;
   font-weight: 400;
@@ -480,6 +480,11 @@ body.hidden {
   }
   100% {
     background-position-x: -1000px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .HomePage img {
+    width: 60%;
   }
 }
 @media screen and (max-width: 375px) {
