@@ -29122,13 +29122,13 @@ var _default = function _default() {
   switch (type) {
     case 'FLY':
       return _objectSpread({}, state, {
-        y: state.y - 70,
+        y: state.y - 80,
         r: -140
       });
 
     case 'FALL':
       return _objectSpread({}, state, {
-        y: state.y + 40,
+        y: state.y + 30,
         r: 0
       });
 
@@ -41830,7 +41830,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50338" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61413" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
