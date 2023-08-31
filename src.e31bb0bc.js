@@ -32654,6 +32654,7 @@ var Pipe = function Pipe(_ref) {
         position: 'absolute',
         top: topHeight + 100,
         height: 'auto',
+        width: '70%',
         zIndex: 320,
         bottom: 0,
         left: x + i * 100,
@@ -32662,7 +32663,7 @@ var Pipe = function Pipe(_ref) {
       src: imgHint(i)
     }), /*#__PURE__*/_react.default.createElement("div", {
       style: {
-        // backgroundSize:'cover',
+        backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         position: 'absolute',
         top: topHeight + 200,
@@ -41830,7 +41831,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61413" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58044" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
