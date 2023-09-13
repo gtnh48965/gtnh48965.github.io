@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9dbc6c49.css",
-    "main.js": "/static/js/main.5e690492.js",
-    "static/media/dragon.svg": "/static/media/dragon.c3dc1274fce83a5c7178d48b7cd87771.svg",
+    "main.css": "/static/css/main.7cb17b9d.css",
+    "main.js": "/static/js/main.fa9f7556.js",
     "static/media/goodRobot.svg": "/static/media/goodRobot.55ca896bdf7a7595c3964fa1af1025d0.svg",
     "static/media/BeelineSans-Regular.eot": "/static/media/BeelineSans-Regular.94640628cd2aa40f55fd.eot",
     "static/media/BeelineSans-Bold.eot": "/static/media/BeelineSans-Bold.07cd736433406dc3ab21.eot",
@@ -13,6 +12,7 @@
     "static/media/BeelineSans-Medium.ttf": "/static/media/BeelineSans-Medium.73622ef0b744b3ee54c9.ttf",
     "static/media/BeelineSans-Black.ttf": "/static/media/BeelineSans-Black.27abc2af9b956b657240.ttf",
     "static/media/evilRobot.svg": "/static/media/evilRobot.3bfd980295856eb44d4e2a51bb84563a.svg",
+    "static/media/dragon.png": "/static/media/dragon.9b56a9fc2fd725146299.png",
     "static/media/gameDragon.svg": "/static/media/gameDragon.dffe263ed5b277aedc5ecba17557b433.svg",
     "static/media/BeelineSans-Medium.woff": "/static/media/BeelineSans-Medium.f2319e7ad84342707095.woff",
     "static/media/BeelineSans-Bold.woff": "/static/media/BeelineSans-Bold.05c446fbbaa3c414329d.woff",
@@ -27,11 +27,11 @@
     "index.html": "/index.html",
     "static/media/background.svg": "/static/media/background.1e21d0c17848c495fdf4.svg",
     "static/media/vector.svg": "/static/media/vector.a606186ffb925d2486b3.svg",
-    "main.9dbc6c49.css.map": "/static/css/main.9dbc6c49.css.map",
-    "main.5e690492.js.map": "/static/js/main.5e690492.js.map"
+    "main.7cb17b9d.css.map": "/static/css/main.7cb17b9d.css.map",
+    "main.fa9f7556.js.map": "/static/js/main.fa9f7556.js.map"
   },
   "entrypoints": [
-    "static/css/main.9dbc6c49.css",
-    "static/js/main.5e690492.js"
+    "static/css/main.7cb17b9d.css",
+    "static/js/main.fa9f7556.js"
   ]
 }
