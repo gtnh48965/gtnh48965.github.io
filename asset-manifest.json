@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7cb17b9d.css",
-    "main.js": "/static/js/main.fa9f7556.js",
+    "main.css": "/static/css/main.4d8601bc.css",
+    "main.js": "/static/js/main.308974e3.js",
     "static/media/goodRobot.svg": "/static/media/goodRobot.55ca896bdf7a7595c3964fa1af1025d0.svg",
     "static/media/BeelineSans-Regular.eot": "/static/media/BeelineSans-Regular.94640628cd2aa40f55fd.eot",
     "static/media/BeelineSans-Bold.eot": "/static/media/BeelineSans-Bold.07cd736433406dc3ab21.eot",
@@ -27,11 +27,11 @@
     "index.html": "/index.html",
     "static/media/background.svg": "/static/media/background.1e21d0c17848c495fdf4.svg",
     "static/media/vector.svg": "/static/media/vector.a606186ffb925d2486b3.svg",
-    "main.7cb17b9d.css.map": "/static/css/main.7cb17b9d.css.map",
-    "main.fa9f7556.js.map": "/static/js/main.fa9f7556.js.map"
+    "main.4d8601bc.css.map": "/static/css/main.4d8601bc.css.map",
+    "main.308974e3.js.map": "/static/js/main.308974e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cb17b9d.css",
-    "static/js/main.fa9f7556.js"
+    "static/css/main.4d8601bc.css",
+    "static/js/main.308974e3.js"
   ]
 }
