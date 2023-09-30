@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f88dcc0a.css",
-    "main.js": "/static/js/main.0d2ac6f7.js",
+    "main.css": "/static/css/main.91af3837.css",
+    "main.js": "/static/js/main.e2619660.js",
     "static/media/bg.svg": "/static/media/bg.0a00faf405194e24f3fb.svg",
     "static/media/NipigazBasic-Regular.ttf": "/static/media/NipigazBasic-Regular.65e4afa083711c56b2bd.ttf",
     "static/media/NipigazBasic-Italic.ttf": "/static/media/NipigazBasic-Italic.250ea9cd41ae14b45ad7.ttf",
@@ -15,11 +15,11 @@
     "static/media/heard.svg": "/static/media/heard.48b0695190c4061f4fe7c80d2c7d179f.svg",
     "static/media/arrow.svg": "/static/media/arrow.c81c21020286847fd2c0.svg",
     "index.html": "/index.html",
-    "main.f88dcc0a.css.map": "/static/css/main.f88dcc0a.css.map",
-    "main.0d2ac6f7.js.map": "/static/js/main.0d2ac6f7.js.map"
+    "main.91af3837.css.map": "/static/css/main.91af3837.css.map",
+    "main.e2619660.js.map": "/static/js/main.e2619660.js.map"
   },
   "entrypoints": [
-    "static/css/main.f88dcc0a.css",
-    "static/js/main.0d2ac6f7.js"
+    "static/css/main.91af3837.css",
+    "static/js/main.e2619660.js"
   ]
 }
