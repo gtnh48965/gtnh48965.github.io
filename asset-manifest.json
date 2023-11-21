@@ -1,9 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.174c44ed.css",
-    "main.js": "/static/js/main.24710274.js",
+    "main.css": "/static/css/main.a43f1e14.css",
+    "main.js": "/static/js/main.58e44890.js",
+    "static/media/3.svg": "/static/media/3.11f687f6f403a9545a93a23fce46ee1b.svg",
+    "static/media/5.svg": "/static/media/5.a47c78dac1783ad233bf85c4f5202d6d.svg",
+    "static/media/1.svg": "/static/media/1.d3ba0afd2ac9a8b609cacdf17a36a739.svg",
+    "static/media/9.svg": "/static/media/9.18c6b7fe7d64de43a2a44cdbb9893c10.svg",
+    "static/media/15.svg": "/static/media/15.b1088443a7d14471983cb555c0845b95.svg",
+    "static/media/11.svg": "/static/media/11.23b1dc87400df105f760f1f093a7bf94.svg",
+    "static/media/13.svg": "/static/media/13.1cde7802110d8ba5ac48f6ea0151e47f.svg",
+    "static/media/7.svg": "/static/media/7.96f23822c101fa641b8f62c076ffd987.svg",
+    "static/media/fact2.svg": "/static/media/fact2.70b0df50a38074185071fb972206a9aa.svg",
+    "static/media/fact1.svg": "/static/media/fact1.8012bd7f18d14d565b89f832fc85fda5.svg",
+    "static/media/14.svg": "/static/media/14.793c718ad15ed11bd76febdf53b5df5e.svg",
+    "static/media/4.svg": "/static/media/4.793c718ad15ed11bd76febdf53b5df5e.svg",
+    "static/media/12.svg": "/static/media/12.f1a30997c48fcb312f192e6f45ad8327.svg",
+    "static/media/8.svg": "/static/media/8.f1a30997c48fcb312f192e6f45ad8327.svg",
+    "static/media/2.svg": "/static/media/2.0d77aadcdfb8cc4de8d268e414d33400.svg",
+    "static/media/main.svg": "/static/media/main.c45a63e4627425511f0e888a5cfdd072.svg",
+    "static/media/10.svg": "/static/media/10.86f48a796a11b3cfd826c51dd78dad30.svg",
+    "static/media/6.svg": "/static/media/6.86f48a796a11b3cfd826c51dd78dad30.svg",
     "static/media/dragon.png": "/static/media/dragon.3661d600dc7cf70e84d0.png",
-    "static/media/goodRobot.png": "/static/media/goodRobot.c46a159ce7d2bff5d255.png",
+    "static/media/mainSecond.svg": "/static/media/mainSecond.9ca2a6d60b117c4aa1038a1613b63e72.svg",
     "static/media/BeelineSans-Regular.eot": "/static/media/BeelineSans-Regular.94640628cd2aa40f55fd.eot",
     "static/media/BeelineSans-Bold.eot": "/static/media/BeelineSans-Bold.07cd736433406dc3ab21.eot",
     "static/media/BeelineSans-Medium.eot": "/static/media/BeelineSans-Medium.0f71ea02f0e848857c03.eot",
@@ -12,8 +30,6 @@
     "static/media/BeelineSans-Bold.ttf": "/static/media/BeelineSans-Bold.55d15b6fe319f149008a.ttf",
     "static/media/BeelineSans-Medium.ttf": "/static/media/BeelineSans-Medium.73622ef0b744b3ee54c9.ttf",
     "static/media/BeelineSans-Black.ttf": "/static/media/BeelineSans-Black.27abc2af9b956b657240.ttf",
-    "static/media/evilRobot.png": "/static/media/evilRobot.a1aee0b1599d226514ea.png",
-    "static/media/gameDragon.png": "/static/media/gameDragon.dc5dcc36060585d52444.png",
     "static/media/BeelineSans-Medium.woff": "/static/media/BeelineSans-Medium.f2319e7ad84342707095.woff",
     "static/media/BeelineSans-Bold.woff": "/static/media/BeelineSans-Bold.05c446fbbaa3c414329d.woff",
     "static/media/BeelineSans-Regular.woff": "/static/media/BeelineSans-Regular.80e547e22812deffa652.woff",
@@ -22,16 +38,17 @@
     "static/media/BeelineSans-Bold.woff2": "/static/media/BeelineSans-Bold.b3da9626f089c2859778.woff2",
     "static/media/BeelineSans-Regular.woff2": "/static/media/BeelineSans-Regular.01ad8f9efedfce46f477.woff2",
     "static/media/BeelineSans-Black.woff2": "/static/media/BeelineSans-Black.9faa308360dfceb41572.woff2",
-    "static/media/bilaine.svg": "/static/media/bilaine.cd34772c99aeff751586875af96b770c.svg",
+    "static/media/bilaine.svg": "/static/media/bilaine.0b484203a969f215d3cf936149ee7604.svg",
     "index.html": "/index.html",
     "static/media/bg2.svg": "/static/media/bg2.e2de9a8a4610c43ba461.svg",
     "static/media/background.svg": "/static/media/background.1e21d0c17848c495fdf4.svg",
-    "static/media/vector.svg": "/static/media/vector.a606186ffb925d2486b3.svg",
-    "main.174c44ed.css.map": "/static/css/main.174c44ed.css.map",
-    "main.24710274.js.map": "/static/js/main.24710274.js.map"
+    "static/media/vactorStart.svg": "/static/media/vactorStart.870c11ee9f1dec31bdbcabe36902336e.svg",
+    "static/media/vector.svg": "/static/media/vector.c9c1a734b0f65756d9ee.svg",
+    "main.a43f1e14.css.map": "/static/css/main.a43f1e14.css.map",
+    "main.58e44890.js.map": "/static/js/main.58e44890.js.map"
   },
   "entrypoints": [
-    "static/css/main.174c44ed.css",
-    "static/js/main.24710274.js"
+    "static/css/main.a43f1e14.css",
+    "static/js/main.58e44890.js"
   ]
 }
