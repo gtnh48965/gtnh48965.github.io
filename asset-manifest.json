@@ -1,7 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.7580e76a.css",
-    "main.js": "/static/js/main.e4a521fa.js",
+    "main.js": "/static/js/main.a0e07e40.js",
+    "static/media/5.png": "/static/media/5.fcc200fad94ad5289b32.png",
+    "static/media/7.png": "/static/media/7.b0049adab7ea37b7a3ad.png",
     "static/media/fact2.png": "/static/media/fact2.a7c856a15ea5497237a0.png",
     "static/media/14.png": "/static/media/14.1e35383b8b6db79a6cd3.png",
     "static/media/4.png": "/static/media/4.1e35383b8b6db79a6cd3.png",
@@ -19,9 +21,7 @@
     "static/media/mainSecond.png": "/static/media/mainSecond.618feeccd439d7cb6a0d.png",
     "static/media/10.png": "/static/media/10.2aabc06eff8853dde8cf.png",
     "static/media/6.png": "/static/media/6.2aabc06eff8853dde8cf.png",
-    "static/media/7.png": "/static/media/7.147c4f0dfd657a66563d.png",
     "static/media/3.png": "/static/media/3.82e8d272833ba600875d.png",
-    "static/media/5.png": "/static/media/5.4bc62b32896b0fabbb5e.png",
     "static/media/BeelineSans-Regular.eot": "/static/media/BeelineSans-Regular.94640628cd2aa40f55fd.eot",
     "static/media/BeelineSans-Bold.eot": "/static/media/BeelineSans-Bold.07cd736433406dc3ab21.eot",
     "static/media/BeelineSans-Medium.eot": "/static/media/BeelineSans-Medium.0f71ea02f0e848857c03.eot",
@@ -46,10 +46,10 @@
     "static/media/vector.svg": "/static/media/vector.c9c1a734b0f65756d9ee.svg",
     "static/media/vectorDemo.svg": "/static/media/vectorDemo.f8c9c118374d729a65b4.svg",
     "main.7580e76a.css.map": "/static/css/main.7580e76a.css.map",
-    "main.e4a521fa.js.map": "/static/js/main.e4a521fa.js.map"
+    "main.a0e07e40.js.map": "/static/js/main.a0e07e40.js.map"
   },
   "entrypoints": [
     "static/css/main.7580e76a.css",
-    "static/js/main.e4a521fa.js"
+    "static/js/main.a0e07e40.js"
   ]
 }
