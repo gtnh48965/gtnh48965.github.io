@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.d5a2076d.css",
-    "main.js": "/static/js/main.d64c6ec0.js",
+    "main.js": "/static/js/main.24788afd.js",
     "static/media/5.png": "/static/media/5.fcc200fad94ad5289b32.png",
     "static/media/7.png": "/static/media/7.b0049adab7ea37b7a3ad.png",
+    "static/media/fact1Olga.png": "/static/media/fact1Olga.985575aa08008fe18a8e.png",
     "static/media/14.png": "/static/media/14.1e35383b8b6db79a6cd3.png",
     "static/media/4.png": "/static/media/4.1e35383b8b6db79a6cd3.png",
     "static/media/dragon.png": "/static/media/dragon.2699288677170624c6d0.png",
     "static/media/12.png": "/static/media/12.293efda0ae57954e2a69.png",
     "static/media/8.png": "/static/media/8.293efda0ae57954e2a69.png",
-    "static/media/fact1.png": "/static/media/fact1.a98b962f2089977ff00c.png",
     "static/media/9.png": "/static/media/9.be79040fd381614a59bc.png",
     "static/media/11.png": "/static/media/11.aa00d5e5333ece46a4fe.png",
     "static/media/2.png": "/static/media/2.c62873343f3abae13aa4.png",
@@ -48,10 +48,10 @@
     "static/media/vector.svg": "/static/media/vector.c9c1a734b0f65756d9ee.svg",
     "static/media/vectorDemo.svg": "/static/media/vectorDemo.f8c9c118374d729a65b4.svg",
     "main.d5a2076d.css.map": "/static/css/main.d5a2076d.css.map",
-    "main.d64c6ec0.js.map": "/static/js/main.d64c6ec0.js.map"
+    "main.24788afd.js.map": "/static/js/main.24788afd.js.map"
   },
   "entrypoints": [
     "static/css/main.d5a2076d.css",
-    "static/js/main.d64c6ec0.js"
+    "static/js/main.24788afd.js"
   ]
 }
